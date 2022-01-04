@@ -58,10 +58,8 @@ This endpoint creates an identity. It is NOT possible to set an identity's crede
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: oryAccessToken
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// Configure Bearer authorization: oryAccessToken
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Ory\Client\Api\V0alpha2Api(
@@ -120,10 +118,8 @@ This endpoint creates a recovery link which should be given to the user in order
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: oryAccessToken
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// Configure Bearer authorization: oryAccessToken
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Ory\Client\Api\V0alpha2Api(
@@ -182,10 +178,8 @@ Calling this endpoint irrecoverably and permanently deletes the identity given i
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: oryAccessToken
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// Configure Bearer authorization: oryAccessToken
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Ory\Client\Api\V0alpha2Api(
@@ -243,10 +237,8 @@ This endpoint is useful for:  To forcefully logout Identity from all devices and
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: oryAccessToken
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// Configure Bearer authorization: oryAccessToken
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Ory\Client\Api\V0alpha2Api(
@@ -304,10 +296,8 @@ Learn how identities work in [Ory Kratos' User And Identity Model Documentation]
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: oryAccessToken
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// Configure Bearer authorization: oryAccessToken
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Ory\Client\Api\V0alpha2Api(
@@ -368,10 +358,8 @@ Lists all identities. Does not support search at the moment.  Learn how identiti
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: oryAccessToken
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// Configure Bearer authorization: oryAccessToken
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Ory\Client\Api\V0alpha2Api(
@@ -432,10 +420,8 @@ This endpoint updates an identity. It is NOT possible to set an identity's crede
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: oryAccessToken
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// Configure Bearer authorization: oryAccessToken
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Ory\Client\Api\V0alpha2Api(

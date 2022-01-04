@@ -1,6 +1,6 @@
 <?php
 /**
- * IdentityCredentialsType
+ * NullPlan
  *
  * PHP version 7.3
  *
@@ -31,22 +31,23 @@ namespace Ory\Client\Model;
 use \Ory\Client\ObjectSerializer;
 
 /**
- * IdentityCredentialsType Class Doc Comment
+ * NullPlan Class Doc Comment
  *
  * @category Class
- * @description and so on.
  * @package  Ory\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class IdentityCredentialsType
+class NullPlan
 {
     /**
      * Possible values of this enum
      */
-    const PASSWORD = 'password';
-    const TOTP = 'totp';
-    const OIDC = 'oidc';
+    const UNKNOWN = 'unknown';
+    const FREE = 'free';
+    const START_UP_MONTHLY = 'start_up_monthly';
+    const START_UP_YEARLY = 'start_up_yearly';
+    const CUSTOM = 'custom';
     
     /**
      * Gets allowable values of the enum
@@ -55,9 +56,11 @@ class IdentityCredentialsType
     public static function getAllowableEnumValues()
     {
         return [
-            self::PASSWORD,
-            self::TOTP,
-            self::OIDC,
+            self::UNKNOWN,
+            self::FREE,
+            self::START_UP_MONTHLY,
+            self::START_UP_YEARLY,
+            self::CUSTOM,
         ];
     }
 }

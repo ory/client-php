@@ -1,6 +1,6 @@
 <?php
 /**
- * SubmitSelfServiceVerificationFlowWithLinkMethodBodyTest
+ * SubscriptionTest
  *
  * PHP version 7.3
  *
@@ -32,15 +32,15 @@ namespace Ory\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * SubmitSelfServiceVerificationFlowWithLinkMethodBodyTest Class Doc Comment
+ * SubscriptionTest Class Doc Comment
  *
  * @category    Class
- * @description SubmitSelfServiceVerificationFlowWithLinkMethodBody
+ * @description Subscription
  * @package     Ory\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class SubmitSelfServiceVerificationFlowWithLinkMethodBodyTest extends TestCase
+class SubscriptionTest extends TestCase
 {
 
     /**
@@ -72,36 +72,99 @@ class SubmitSelfServiceVerificationFlowWithLinkMethodBodyTest extends TestCase
     }
 
     /**
-     * Test "SubmitSelfServiceVerificationFlowWithLinkMethodBody"
+     * Test "Subscription"
      */
-    public function testSubmitSelfServiceVerificationFlowWithLinkMethodBody()
+    public function testSubscription()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "csrfToken"
+     * Test attribute "createdAt"
      */
-    public function testPropertyCsrfToken()
+    public function testPropertyCreatedAt()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "email"
+     * Test attribute "currentPlan"
      */
-    public function testPropertyEmail()
+    public function testPropertyCurrentPlan()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "method"
+     * Test attribute "customerId"
      */
-    public function testPropertyMethod()
+    public function testPropertyCustomerId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "id"
+     */
+    public function testPropertyId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "ongoingStripeCheckoutId"
+     */
+    public function testPropertyOngoingStripeCheckoutId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "payedUntil"
+     */
+    public function testPropertyPayedUntil()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "planChangesAt"
+     */
+    public function testPropertyPlanChangesAt()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "planChangesTo"
+     */
+    public function testPropertyPlanChangesTo()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "status"
+     */
+    public function testPropertyStatus()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "updatedAt"
+     */
+    public function testPropertyUpdatedAt()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

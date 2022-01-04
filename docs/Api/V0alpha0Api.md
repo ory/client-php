@@ -27,10 +27,8 @@ Creates a new project.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: oryAccessToken
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// Configure Bearer authorization: oryAccessToken
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Ory\Client\Api\V0alpha0Api(
@@ -89,10 +87,8 @@ Get a projects you have access to by its ID.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: oryAccessToken
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// Configure Bearer authorization: oryAccessToken
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Ory\Client\Api\V0alpha0Api(
@@ -151,10 +147,8 @@ Lists all projects you have access to.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: oryAccessToken
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// Configure Bearer authorization: oryAccessToken
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Ory\Client\Api\V0alpha0Api(
@@ -210,10 +204,8 @@ Creates a new configuration revision for a project.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: oryAccessToken
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// Configure Bearer authorization: oryAccessToken
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Ory\Client\Api\V0alpha0Api(

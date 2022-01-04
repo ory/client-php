@@ -1,6 +1,6 @@
 <?php
 /**
- * Project
+ * Subscription
  *
  * PHP version 7.3
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \Ory\Client\ObjectSerializer;
 
 /**
- * Project Class Doc Comment
+ * Subscription Class Doc Comment
  *
  * @category Class
  * @package  Ory\Client
@@ -43,7 +43,7 @@ use \Ory\Client\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class Project implements ModelInterface, ArrayAccess, \JsonSerializable
+class Subscription implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -52,7 +52,7 @@ class Project implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'project';
+    protected static $openAPIModelName = 'subscription';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -61,12 +61,14 @@ class Project implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'createdAt' => '\DateTime',
-        'currentRevision' => '\Ory\Client\Model\ProjectRevision',
+        'currentPlan' => 'string',
+        'customerId' => 'string',
         'id' => 'string',
-        'revisions' => '\Ory\Client\Model\ProjectRevision[]',
-        'slug' => 'string',
-        'state' => 'string',
-        'subscriptionId' => 'string',
+        'ongoingStripeCheckoutId' => 'string',
+        'payedUntil' => '\DateTime',
+        'planChangesAt' => '\DateTime',
+        'planChangesTo' => '\Ory\Client\Model\NullPlan',
+        'status' => 'string',
         'updatedAt' => '\DateTime'
     ];
 
@@ -79,12 +81,14 @@ class Project implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'createdAt' => 'date-time',
-        'currentRevision' => null,
+        'currentPlan' => null,
+        'customerId' => null,
         'id' => 'uuid4',
-        'revisions' => null,
-        'slug' => null,
-        'state' => null,
-        'subscriptionId' => 'uuid4',
+        'ongoingStripeCheckoutId' => null,
+        'payedUntil' => 'date-time',
+        'planChangesAt' => 'date-time',
+        'planChangesTo' => null,
+        'status' => null,
         'updatedAt' => 'date-time'
     ];
 
@@ -116,12 +120,14 @@ class Project implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'createdAt' => 'created_at',
-        'currentRevision' => 'current_revision',
+        'currentPlan' => 'current_plan',
+        'customerId' => 'customer_id',
         'id' => 'id',
-        'revisions' => 'revisions',
-        'slug' => 'slug',
-        'state' => 'state',
-        'subscriptionId' => 'subscription_id',
+        'ongoingStripeCheckoutId' => 'ongoing_stripe_checkout_id',
+        'payedUntil' => 'payed_until',
+        'planChangesAt' => 'plan_changes_at',
+        'planChangesTo' => 'plan_changes_to',
+        'status' => 'status',
         'updatedAt' => 'updated_at'
     ];
 
@@ -132,12 +138,14 @@ class Project implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'createdAt' => 'setCreatedAt',
-        'currentRevision' => 'setCurrentRevision',
+        'currentPlan' => 'setCurrentPlan',
+        'customerId' => 'setCustomerId',
         'id' => 'setId',
-        'revisions' => 'setRevisions',
-        'slug' => 'setSlug',
-        'state' => 'setState',
-        'subscriptionId' => 'setSubscriptionId',
+        'ongoingStripeCheckoutId' => 'setOngoingStripeCheckoutId',
+        'payedUntil' => 'setPayedUntil',
+        'planChangesAt' => 'setPlanChangesAt',
+        'planChangesTo' => 'setPlanChangesTo',
+        'status' => 'setStatus',
         'updatedAt' => 'setUpdatedAt'
     ];
 
@@ -148,12 +156,14 @@ class Project implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'createdAt' => 'getCreatedAt',
-        'currentRevision' => 'getCurrentRevision',
+        'currentPlan' => 'getCurrentPlan',
+        'customerId' => 'getCustomerId',
         'id' => 'getId',
-        'revisions' => 'getRevisions',
-        'slug' => 'getSlug',
-        'state' => 'getState',
-        'subscriptionId' => 'getSubscriptionId',
+        'ongoingStripeCheckoutId' => 'getOngoingStripeCheckoutId',
+        'payedUntil' => 'getPayedUntil',
+        'planChangesAt' => 'getPlanChangesAt',
+        'planChangesTo' => 'getPlanChangesTo',
+        'status' => 'getStatus',
         'updatedAt' => 'getUpdatedAt'
     ];
 
@@ -198,19 +208,25 @@ class Project implements ModelInterface, ArrayAccess, \JsonSerializable
         return self::$openAPIModelName;
     }
 
-    const STATE_RUNNING = 'running';
-    const STATE_HALTED = 'halted';
+    const CURRENT_PLAN_UNKNOWN = 'unknown';
+    const CURRENT_PLAN_FREE = 'free';
+    const CURRENT_PLAN_START_UP_MONTHLY = 'start_up_monthly';
+    const CURRENT_PLAN_START_UP_YEARLY = 'start_up_yearly';
+    const CURRENT_PLAN_CUSTOM = 'custom';
 
     /**
      * Gets allowable values of the enum
      *
      * @return string[]
      */
-    public function getStateAllowableValues()
+    public function getCurrentPlanAllowableValues()
     {
         return [
-            self::STATE_RUNNING,
-            self::STATE_HALTED,
+            self::CURRENT_PLAN_UNKNOWN,
+            self::CURRENT_PLAN_FREE,
+            self::CURRENT_PLAN_START_UP_MONTHLY,
+            self::CURRENT_PLAN_START_UP_YEARLY,
+            self::CURRENT_PLAN_CUSTOM,
         ];
     }
 
@@ -230,12 +246,14 @@ class Project implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['createdAt'] = $data['createdAt'] ?? null;
-        $this->container['currentRevision'] = $data['currentRevision'] ?? null;
+        $this->container['currentPlan'] = $data['currentPlan'] ?? null;
+        $this->container['customerId'] = $data['customerId'] ?? null;
         $this->container['id'] = $data['id'] ?? null;
-        $this->container['revisions'] = $data['revisions'] ?? null;
-        $this->container['slug'] = $data['slug'] ?? null;
-        $this->container['state'] = $data['state'] ?? null;
-        $this->container['subscriptionId'] = $data['subscriptionId'] ?? null;
+        $this->container['ongoingStripeCheckoutId'] = $data['ongoingStripeCheckoutId'] ?? null;
+        $this->container['payedUntil'] = $data['payedUntil'] ?? null;
+        $this->container['planChangesAt'] = $data['planChangesAt'] ?? null;
+        $this->container['planChangesTo'] = $data['planChangesTo'] ?? null;
+        $this->container['status'] = $data['status'] ?? null;
         $this->container['updatedAt'] = $data['updatedAt'] ?? null;
     }
 
@@ -251,30 +269,33 @@ class Project implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['createdAt'] === null) {
             $invalidProperties[] = "'createdAt' can't be null";
         }
-        if ($this->container['currentRevision'] === null) {
-            $invalidProperties[] = "'currentRevision' can't be null";
+        if ($this->container['currentPlan'] === null) {
+            $invalidProperties[] = "'currentPlan' can't be null";
         }
-        if ($this->container['id'] === null) {
-            $invalidProperties[] = "'id' can't be null";
-        }
-        if ($this->container['revisions'] === null) {
-            $invalidProperties[] = "'revisions' can't be null";
-        }
-        if ($this->container['slug'] === null) {
-            $invalidProperties[] = "'slug' can't be null";
-        }
-        if ($this->container['state'] === null) {
-            $invalidProperties[] = "'state' can't be null";
-        }
-        $allowedValues = $this->getStateAllowableValues();
-        if (!is_null($this->container['state']) && !in_array($this->container['state'], $allowedValues, true)) {
+        $allowedValues = $this->getCurrentPlanAllowableValues();
+        if (!is_null($this->container['currentPlan']) && !in_array($this->container['currentPlan'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'state', must be one of '%s'",
-                $this->container['state'],
+                "invalid value '%s' for 'currentPlan', must be one of '%s'",
+                $this->container['currentPlan'],
                 implode("', '", $allowedValues)
             );
         }
 
+        if ($this->container['customerId'] === null) {
+            $invalidProperties[] = "'customerId' can't be null";
+        }
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
+        }
+        if ($this->container['payedUntil'] === null) {
+            $invalidProperties[] = "'payedUntil' can't be null";
+        }
+        if ($this->container['planChangesTo'] === null) {
+            $invalidProperties[] = "'planChangesTo' can't be null";
+        }
+        if ($this->container['status'] === null) {
+            $invalidProperties[] = "'status' can't be null";
+        }
         if ($this->container['updatedAt'] === null) {
             $invalidProperties[] = "'updatedAt' can't be null";
         }
@@ -306,7 +327,7 @@ class Project implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets createdAt
      *
-     * @param \DateTime $createdAt The Project's Creation Date
+     * @param \DateTime $createdAt createdAt
      *
      * @return self
      */
@@ -318,25 +339,59 @@ class Project implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets currentRevision
+     * Gets currentPlan
      *
-     * @return \Ory\Client\Model\ProjectRevision
+     * @return string
      */
-    public function getCurrentRevision()
+    public function getCurrentPlan()
     {
-        return $this->container['currentRevision'];
+        return $this->container['currentPlan'];
     }
 
     /**
-     * Sets currentRevision
+     * Sets currentPlan
      *
-     * @param \Ory\Client\Model\ProjectRevision $currentRevision currentRevision
+     * @param string $currentPlan The currently active plan of the subscription
      *
      * @return self
      */
-    public function setCurrentRevision($currentRevision)
+    public function setCurrentPlan($currentPlan)
     {
-        $this->container['currentRevision'] = $currentRevision;
+        $allowedValues = $this->getCurrentPlanAllowableValues();
+        if (!in_array($currentPlan, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'currentPlan', must be one of '%s'",
+                    $currentPlan,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['currentPlan'] = $currentPlan;
+
+        return $this;
+    }
+
+    /**
+     * Gets customerId
+     *
+     * @return string
+     */
+    public function getCustomerId()
+    {
+        return $this->container['customerId'];
+    }
+
+    /**
+     * Sets customerId
+     *
+     * @param string $customerId The ID of the stripe customer
+     *
+     * @return self
+     */
+    public function setCustomerId($customerId)
+    {
+        $this->container['customerId'] = $customerId;
 
         return $this;
     }
@@ -366,107 +421,121 @@ class Project implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets revisions
-     *
-     * @return \Ory\Client\Model\ProjectRevision[]
-     */
-    public function getRevisions()
-    {
-        return $this->container['revisions'];
-    }
-
-    /**
-     * Sets revisions
-     *
-     * @param \Ory\Client\Model\ProjectRevision[] $revisions revisions
-     *
-     * @return self
-     */
-    public function setRevisions($revisions)
-    {
-        $this->container['revisions'] = $revisions;
-
-        return $this;
-    }
-
-    /**
-     * Gets slug
-     *
-     * @return string
-     */
-    public function getSlug()
-    {
-        return $this->container['slug'];
-    }
-
-    /**
-     * Sets slug
-     *
-     * @param string $slug The project's slug
-     *
-     * @return self
-     */
-    public function setSlug($slug)
-    {
-        $this->container['slug'] = $slug;
-
-        return $this;
-    }
-
-    /**
-     * Gets state
-     *
-     * @return string
-     */
-    public function getState()
-    {
-        return $this->container['state'];
-    }
-
-    /**
-     * Sets state
-     *
-     * @param string $state The state of the project.
-     *
-     * @return self
-     */
-    public function setState($state)
-    {
-        $allowedValues = $this->getStateAllowableValues();
-        if (!in_array($state, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'state', must be one of '%s'",
-                    $state,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['state'] = $state;
-
-        return $this;
-    }
-
-    /**
-     * Gets subscriptionId
+     * Gets ongoingStripeCheckoutId
      *
      * @return string|null
      */
-    public function getSubscriptionId()
+    public function getOngoingStripeCheckoutId()
     {
-        return $this->container['subscriptionId'];
+        return $this->container['ongoingStripeCheckoutId'];
     }
 
     /**
-     * Sets subscriptionId
+     * Sets ongoingStripeCheckoutId
      *
-     * @param string|null $subscriptionId subscriptionId
+     * @param string|null $ongoingStripeCheckoutId ongoingStripeCheckoutId
      *
      * @return self
      */
-    public function setSubscriptionId($subscriptionId)
+    public function setOngoingStripeCheckoutId($ongoingStripeCheckoutId)
     {
-        $this->container['subscriptionId'] = $subscriptionId;
+        $this->container['ongoingStripeCheckoutId'] = $ongoingStripeCheckoutId;
+
+        return $this;
+    }
+
+    /**
+     * Gets payedUntil
+     *
+     * @return \DateTime
+     */
+    public function getPayedUntil()
+    {
+        return $this->container['payedUntil'];
+    }
+
+    /**
+     * Sets payedUntil
+     *
+     * @param \DateTime $payedUntil Until when the subscription is payed
+     *
+     * @return self
+     */
+    public function setPayedUntil($payedUntil)
+    {
+        $this->container['payedUntil'] = $payedUntil;
+
+        return $this;
+    }
+
+    /**
+     * Gets planChangesAt
+     *
+     * @return \DateTime|null
+     */
+    public function getPlanChangesAt()
+    {
+        return $this->container['planChangesAt'];
+    }
+
+    /**
+     * Sets planChangesAt
+     *
+     * @param \DateTime|null $planChangesAt planChangesAt
+     *
+     * @return self
+     */
+    public function setPlanChangesAt($planChangesAt)
+    {
+        $this->container['planChangesAt'] = $planChangesAt;
+
+        return $this;
+    }
+
+    /**
+     * Gets planChangesTo
+     *
+     * @return \Ory\Client\Model\NullPlan
+     */
+    public function getPlanChangesTo()
+    {
+        return $this->container['planChangesTo'];
+    }
+
+    /**
+     * Sets planChangesTo
+     *
+     * @param \Ory\Client\Model\NullPlan $planChangesTo planChangesTo
+     *
+     * @return self
+     */
+    public function setPlanChangesTo($planChangesTo)
+    {
+        $this->container['planChangesTo'] = $planChangesTo;
+
+        return $this;
+    }
+
+    /**
+     * Gets status
+     *
+     * @return string
+     */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+     * Sets status
+     *
+     * @param string $status status
+     *
+     * @return self
+     */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
 
         return $this;
     }
@@ -484,7 +553,7 @@ class Project implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets updatedAt
      *
-     * @param \DateTime $updatedAt Last Time Project was Updated
+     * @param \DateTime $updatedAt updatedAt
      *
      * @return self
      */
