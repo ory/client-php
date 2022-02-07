@@ -1,6 +1,6 @@
 <?php
 /**
- * SubmitSelfServiceSettingsFlowWithTotpMethodBody
+ * InlineObject
  *
  * PHP version 7.3
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \Ory\Client\ObjectSerializer;
 
 /**
- * SubmitSelfServiceSettingsFlowWithTotpMethodBody Class Doc Comment
+ * InlineObject Class Doc Comment
  *
  * @category Class
  * @package  Ory\Client
@@ -43,7 +43,7 @@ use \Ory\Client\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class SubmitSelfServiceSettingsFlowWithTotpMethodBody implements ModelInterface, ArrayAccess, \JsonSerializable
+class InlineObject implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -52,7 +52,7 @@ class SubmitSelfServiceSettingsFlowWithTotpMethodBody implements ModelInterface,
       *
       * @var string
       */
-    protected static $openAPIModelName = 'submitSelfServiceSettingsFlowWithTotpMethodBody';
+    protected static $openAPIModelName = 'inline_object';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -60,10 +60,7 @@ class SubmitSelfServiceSettingsFlowWithTotpMethodBody implements ModelInterface,
       * @var string[]
       */
     protected static $openAPITypes = [
-        'csrfToken' => 'string',
-        'method' => 'string',
-        'totpCode' => 'string',
-        'totpUnlink' => 'bool'
+        'projectId' => 'string'
     ];
 
     /**
@@ -74,10 +71,7 @@ class SubmitSelfServiceSettingsFlowWithTotpMethodBody implements ModelInterface,
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'csrfToken' => null,
-        'method' => null,
-        'totpCode' => null,
-        'totpUnlink' => null
+        'projectId' => null
     ];
 
     /**
@@ -107,10 +101,7 @@ class SubmitSelfServiceSettingsFlowWithTotpMethodBody implements ModelInterface,
      * @var string[]
      */
     protected static $attributeMap = [
-        'csrfToken' => 'csrf_token',
-        'method' => 'method',
-        'totpCode' => 'totp_code',
-        'totpUnlink' => 'totp_unlink'
+        'projectId' => 'project_id'
     ];
 
     /**
@@ -119,10 +110,7 @@ class SubmitSelfServiceSettingsFlowWithTotpMethodBody implements ModelInterface,
      * @var string[]
      */
     protected static $setters = [
-        'csrfToken' => 'setCsrfToken',
-        'method' => 'setMethod',
-        'totpCode' => 'setTotpCode',
-        'totpUnlink' => 'setTotpUnlink'
+        'projectId' => 'setProjectId'
     ];
 
     /**
@@ -131,10 +119,7 @@ class SubmitSelfServiceSettingsFlowWithTotpMethodBody implements ModelInterface,
      * @var string[]
      */
     protected static $getters = [
-        'csrfToken' => 'getCsrfToken',
-        'method' => 'getMethod',
-        'totpCode' => 'getTotpCode',
-        'totpUnlink' => 'getTotpUnlink'
+        'projectId' => 'getProjectId'
     ];
 
     /**
@@ -194,10 +179,7 @@ class SubmitSelfServiceSettingsFlowWithTotpMethodBody implements ModelInterface,
      */
     public function __construct(array $data = null)
     {
-        $this->container['csrfToken'] = $data['csrfToken'] ?? null;
-        $this->container['method'] = $data['method'] ?? null;
-        $this->container['totpCode'] = $data['totpCode'] ?? null;
-        $this->container['totpUnlink'] = $data['totpUnlink'] ?? null;
+        $this->container['projectId'] = $data['projectId'] ?? null;
     }
 
     /**
@@ -209,8 +191,8 @@ class SubmitSelfServiceSettingsFlowWithTotpMethodBody implements ModelInterface,
     {
         $invalidProperties = [];
 
-        if ($this->container['method'] === null) {
-            $invalidProperties[] = "'method' can't be null";
+        if ($this->container['projectId'] === null) {
+            $invalidProperties[] = "'projectId' can't be null";
         }
         return $invalidProperties;
     }
@@ -228,97 +210,25 @@ class SubmitSelfServiceSettingsFlowWithTotpMethodBody implements ModelInterface,
 
 
     /**
-     * Gets csrfToken
-     *
-     * @return string|null
-     */
-    public function getCsrfToken()
-    {
-        return $this->container['csrfToken'];
-    }
-
-    /**
-     * Sets csrfToken
-     *
-     * @param string|null $csrfToken CSRFToken is the anti-CSRF token
-     *
-     * @return self
-     */
-    public function setCsrfToken($csrfToken)
-    {
-        $this->container['csrfToken'] = $csrfToken;
-
-        return $this;
-    }
-
-    /**
-     * Gets method
+     * Gets projectId
      *
      * @return string
      */
-    public function getMethod()
+    public function getProjectId()
     {
-        return $this->container['method'];
+        return $this->container['projectId'];
     }
 
     /**
-     * Sets method
+     * Sets projectId
      *
-     * @param string $method Method  Should be set to \"totp\" when trying to add, update, or remove a totp pairing.
+     * @param string $projectId Project ID  The Project ID you want to set active.  format: uuid
      *
      * @return self
      */
-    public function setMethod($method)
+    public function setProjectId($projectId)
     {
-        $this->container['method'] = $method;
-
-        return $this;
-    }
-
-    /**
-     * Gets totpCode
-     *
-     * @return string|null
-     */
-    public function getTotpCode()
-    {
-        return $this->container['totpCode'];
-    }
-
-    /**
-     * Sets totpCode
-     *
-     * @param string|null $totpCode ValidationTOTP must contain a valid TOTP based on the
-     *
-     * @return self
-     */
-    public function setTotpCode($totpCode)
-    {
-        $this->container['totpCode'] = $totpCode;
-
-        return $this;
-    }
-
-    /**
-     * Gets totpUnlink
-     *
-     * @return bool|null
-     */
-    public function getTotpUnlink()
-    {
-        return $this->container['totpUnlink'];
-    }
-
-    /**
-     * Sets totpUnlink
-     *
-     * @param bool|null $totpUnlink UnlinkTOTP if true will remove the TOTP pairing, effectively removing the credential. This can be used to set up a new TOTP device.
-     *
-     * @return self
-     */
-    public function setTotpUnlink($totpUnlink)
-    {
-        $this->container['totpUnlink'] = $totpUnlink;
+        $this->container['projectId'] = $projectId;
 
         return $this;
     }

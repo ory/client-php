@@ -1,6 +1,6 @@
 <?php
 /**
- * SubmitSelfServiceRecoveryFlowBodyTest
+ * InlineObjectTest
  *
  * PHP version 7.3
  *
@@ -32,15 +32,15 @@ namespace Ory\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * SubmitSelfServiceRecoveryFlowBodyTest Class Doc Comment
+ * InlineObjectTest Class Doc Comment
  *
  * @category    Class
- * @description SubmitSelfServiceRecoveryFlowBody
+ * @description InlineObject
  * @package     Ory\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class SubmitSelfServiceRecoveryFlowBodyTest extends TestCase
+class InlineObjectTest extends TestCase
 {
 
     /**
@@ -72,36 +72,18 @@ class SubmitSelfServiceRecoveryFlowBodyTest extends TestCase
     }
 
     /**
-     * Test "SubmitSelfServiceRecoveryFlowBody"
+     * Test "InlineObject"
      */
-    public function testSubmitSelfServiceRecoveryFlowBody()
+    public function testInlineObject()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "csrfToken"
+     * Test attribute "projectId"
      */
-    public function testPropertyCsrfToken()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "email"
-     */
-    public function testPropertyEmail()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "method"
-     */
-    public function testPropertyMethod()
+    public function testPropertyProjectId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
