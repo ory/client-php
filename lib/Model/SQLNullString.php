@@ -1,6 +1,6 @@
 <?php
 /**
- * SubmitSelfServiceSettingsFlowWithProfileMethodBody
+ * SQLNullString
  *
  * PHP version 7.3
  *
@@ -33,10 +33,9 @@ use \ArrayAccess;
 use \Ory\Client\ObjectSerializer;
 
 /**
- * SubmitSelfServiceSettingsFlowWithProfileMethodBody Class Doc Comment
+ * SQLNullString Class Doc Comment
  *
  * @category Class
- * @description nolint:deadcode,unused
  * @package  Ory\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -44,7 +43,7 @@ use \Ory\Client\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class SubmitSelfServiceSettingsFlowWithProfileMethodBody implements ModelInterface, ArrayAccess, \JsonSerializable
+class SQLNullString implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -53,7 +52,7 @@ class SubmitSelfServiceSettingsFlowWithProfileMethodBody implements ModelInterfa
       *
       * @var string
       */
-    protected static $openAPIModelName = 'submitSelfServiceSettingsFlowWithProfileMethodBody';
+    protected static $openAPIModelName = 'SQLNullString';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -61,9 +60,8 @@ class SubmitSelfServiceSettingsFlowWithProfileMethodBody implements ModelInterfa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'csrfToken' => 'string',
-        'method' => 'string',
-        'traits' => 'object'
+        'string' => 'string',
+        'valid' => 'bool'
     ];
 
     /**
@@ -74,9 +72,8 @@ class SubmitSelfServiceSettingsFlowWithProfileMethodBody implements ModelInterfa
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'csrfToken' => null,
-        'method' => null,
-        'traits' => null
+        'string' => null,
+        'valid' => null
     ];
 
     /**
@@ -106,9 +103,8 @@ class SubmitSelfServiceSettingsFlowWithProfileMethodBody implements ModelInterfa
      * @var string[]
      */
     protected static $attributeMap = [
-        'csrfToken' => 'csrf_token',
-        'method' => 'method',
-        'traits' => 'traits'
+        'string' => 'String',
+        'valid' => 'Valid'
     ];
 
     /**
@@ -117,9 +113,8 @@ class SubmitSelfServiceSettingsFlowWithProfileMethodBody implements ModelInterfa
      * @var string[]
      */
     protected static $setters = [
-        'csrfToken' => 'setCsrfToken',
-        'method' => 'setMethod',
-        'traits' => 'setTraits'
+        'string' => 'setString',
+        'valid' => 'setValid'
     ];
 
     /**
@@ -128,9 +123,8 @@ class SubmitSelfServiceSettingsFlowWithProfileMethodBody implements ModelInterfa
      * @var string[]
      */
     protected static $getters = [
-        'csrfToken' => 'getCsrfToken',
-        'method' => 'getMethod',
-        'traits' => 'getTraits'
+        'string' => 'getString',
+        'valid' => 'getValid'
     ];
 
     /**
@@ -190,9 +184,8 @@ class SubmitSelfServiceSettingsFlowWithProfileMethodBody implements ModelInterfa
      */
     public function __construct(array $data = null)
     {
-        $this->container['csrfToken'] = $data['csrfToken'] ?? null;
-        $this->container['method'] = $data['method'] ?? null;
-        $this->container['traits'] = $data['traits'] ?? null;
+        $this->container['string'] = $data['string'] ?? null;
+        $this->container['valid'] = $data['valid'] ?? null;
     }
 
     /**
@@ -204,12 +197,6 @@ class SubmitSelfServiceSettingsFlowWithProfileMethodBody implements ModelInterfa
     {
         $invalidProperties = [];
 
-        if ($this->container['method'] === null) {
-            $invalidProperties[] = "'method' can't be null";
-        }
-        if ($this->container['traits'] === null) {
-            $invalidProperties[] = "'traits' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -226,73 +213,49 @@ class SubmitSelfServiceSettingsFlowWithProfileMethodBody implements ModelInterfa
 
 
     /**
-     * Gets csrfToken
+     * Gets string
      *
      * @return string|null
      */
-    public function getCsrfToken()
+    public function getString()
     {
-        return $this->container['csrfToken'];
+        return $this->container['string'];
     }
 
     /**
-     * Sets csrfToken
+     * Sets string
      *
-     * @param string|null $csrfToken The Anti-CSRF Token  This token is only required when performing browser flows.
+     * @param string|null $string string
      *
      * @return self
      */
-    public function setCsrfToken($csrfToken)
+    public function setString($string)
     {
-        $this->container['csrfToken'] = $csrfToken;
+        $this->container['string'] = $string;
 
         return $this;
     }
 
     /**
-     * Gets method
+     * Gets valid
      *
-     * @return string
+     * @return bool|null
      */
-    public function getMethod()
+    public function getValid()
     {
-        return $this->container['method'];
+        return $this->container['valid'];
     }
 
     /**
-     * Sets method
+     * Sets valid
      *
-     * @param string $method Method  Should be set to profile when trying to update a profile.
+     * @param bool|null $valid valid
      *
      * @return self
      */
-    public function setMethod($method)
+    public function setValid($valid)
     {
-        $this->container['method'] = $method;
-
-        return $this;
-    }
-
-    /**
-     * Gets traits
-     *
-     * @return object
-     */
-    public function getTraits()
-    {
-        return $this->container['traits'];
-    }
-
-    /**
-     * Sets traits
-     *
-     * @param object $traits Traits contains all of the identity's traits.
-     *
-     * @return self
-     */
-    public function setTraits($traits)
-    {
-        $this->container['traits'] = $traits;
+        $this->container['valid'] = $valid;
 
         return $this;
     }

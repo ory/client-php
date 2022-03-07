@@ -1,6 +1,6 @@
 <?php
 /**
- * IdentityCredentialsPasswordTest
+ * SQLNullStringTest
  *
  * PHP version 7.3
  *
@@ -32,15 +32,15 @@ namespace Ory\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * IdentityCredentialsPasswordTest Class Doc Comment
+ * SQLNullStringTest Class Doc Comment
  *
  * @category    Class
- * @description IdentityCredentialsPassword
+ * @description SQLNullString
  * @package     Ory\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class IdentityCredentialsPasswordTest extends TestCase
+class SQLNullStringTest extends TestCase
 {
 
     /**
@@ -72,18 +72,27 @@ class IdentityCredentialsPasswordTest extends TestCase
     }
 
     /**
-     * Test "IdentityCredentialsPassword"
+     * Test "SQLNullString"
      */
-    public function testIdentityCredentialsPassword()
+    public function testSQLNullString()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "hashedPassword"
+     * Test attribute "string"
      */
-    public function testPropertyHashedPassword()
+    public function testPropertyString()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "valid"
+     */
+    public function testPropertyValid()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
