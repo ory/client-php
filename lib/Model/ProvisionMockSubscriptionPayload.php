@@ -1,6 +1,6 @@
 <?php
 /**
- * SuccessfulProjectUpdate
+ * ProvisionMockSubscriptionPayload
  *
  * PHP version 7.3
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \Ory\Client\ObjectSerializer;
 
 /**
- * SuccessfulProjectUpdate Class Doc Comment
+ * ProvisionMockSubscriptionPayload Class Doc Comment
  *
  * @category Class
  * @package  Ory\Client
@@ -43,7 +43,7 @@ use \Ory\Client\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class SuccessfulProjectUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
+class ProvisionMockSubscriptionPayload implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -52,7 +52,7 @@ class SuccessfulProjectUpdate implements ModelInterface, ArrayAccess, \JsonSeria
       *
       * @var string
       */
-    protected static $openAPIModelName = 'successfulProjectUpdate';
+    protected static $openAPIModelName = 'provisionMockSubscriptionPayload';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -60,8 +60,8 @@ class SuccessfulProjectUpdate implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'project' => '\Ory\Client\Model\Project',
-        'warnings' => '\Ory\Client\Model\Warning[]'
+        'identityId' => 'string',
+        'planOrPrice' => 'string'
     ];
 
     /**
@@ -72,8 +72,8 @@ class SuccessfulProjectUpdate implements ModelInterface, ArrayAccess, \JsonSeria
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'project' => null,
-        'warnings' => null
+        'identityId' => 'uuid4',
+        'planOrPrice' => null
     ];
 
     /**
@@ -103,8 +103,8 @@ class SuccessfulProjectUpdate implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $attributeMap = [
-        'project' => 'project',
-        'warnings' => 'warnings'
+        'identityId' => 'identity_id',
+        'planOrPrice' => 'plan_or_price'
     ];
 
     /**
@@ -113,8 +113,8 @@ class SuccessfulProjectUpdate implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $setters = [
-        'project' => 'setProject',
-        'warnings' => 'setWarnings'
+        'identityId' => 'setIdentityId',
+        'planOrPrice' => 'setPlanOrPrice'
     ];
 
     /**
@@ -123,8 +123,8 @@ class SuccessfulProjectUpdate implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $getters = [
-        'project' => 'getProject',
-        'warnings' => 'getWarnings'
+        'identityId' => 'getIdentityId',
+        'planOrPrice' => 'getPlanOrPrice'
     ];
 
     /**
@@ -184,8 +184,8 @@ class SuccessfulProjectUpdate implements ModelInterface, ArrayAccess, \JsonSeria
      */
     public function __construct(array $data = null)
     {
-        $this->container['project'] = $data['project'] ?? null;
-        $this->container['warnings'] = $data['warnings'] ?? null;
+        $this->container['identityId'] = $data['identityId'] ?? null;
+        $this->container['planOrPrice'] = $data['planOrPrice'] ?? null;
     }
 
     /**
@@ -197,11 +197,11 @@ class SuccessfulProjectUpdate implements ModelInterface, ArrayAccess, \JsonSeria
     {
         $invalidProperties = [];
 
-        if ($this->container['project'] === null) {
-            $invalidProperties[] = "'project' can't be null";
+        if ($this->container['identityId'] === null) {
+            $invalidProperties[] = "'identityId' can't be null";
         }
-        if ($this->container['warnings'] === null) {
-            $invalidProperties[] = "'warnings' can't be null";
+        if ($this->container['planOrPrice'] === null) {
+            $invalidProperties[] = "'planOrPrice' can't be null";
         }
         return $invalidProperties;
     }
@@ -219,49 +219,49 @@ class SuccessfulProjectUpdate implements ModelInterface, ArrayAccess, \JsonSeria
 
 
     /**
-     * Gets project
+     * Gets identityId
      *
-     * @return \Ory\Client\Model\Project
+     * @return string
      */
-    public function getProject()
+    public function getIdentityId()
     {
-        return $this->container['project'];
+        return $this->container['identityId'];
     }
 
     /**
-     * Sets project
+     * Sets identityId
      *
-     * @param \Ory\Client\Model\Project $project project
+     * @param string $identityId identityId
      *
      * @return self
      */
-    public function setProject($project)
+    public function setIdentityId($identityId)
     {
-        $this->container['project'] = $project;
+        $this->container['identityId'] = $identityId;
 
         return $this;
     }
 
     /**
-     * Gets warnings
+     * Gets planOrPrice
      *
-     * @return \Ory\Client\Model\Warning[]
+     * @return string
      */
-    public function getWarnings()
+    public function getPlanOrPrice()
     {
-        return $this->container['warnings'];
+        return $this->container['planOrPrice'];
     }
 
     /**
-     * Sets warnings
+     * Sets planOrPrice
      *
-     * @param \Ory\Client\Model\Warning[] $warnings Import Warnings  Not all configuration items can be imported to Ory Cloud. For example, setting the port does not make sense because Ory Cloud provides the runtime and networking.  This field contains warnings where configuration keys were found but can not be imported. These keys will be ignored by Ory Cloud. This field will help you understand why certain configuration keys might not be respected!
+     * @param string $planOrPrice planOrPrice
      *
      * @return self
      */
-    public function setWarnings($warnings)
+    public function setPlanOrPrice($planOrPrice)
     {
-        $this->container['warnings'] = $warnings;
+        $this->container['planOrPrice'] = $planOrPrice;
 
         return $this;
     }

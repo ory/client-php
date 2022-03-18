@@ -1,6 +1,6 @@
 <?php
 /**
- * UpdateCustomHostnameBodyTest
+ * ProvisionMockSubscriptionPayloadTest
  *
  * PHP version 7.3
  *
@@ -32,15 +32,15 @@ namespace Ory\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * UpdateCustomHostnameBodyTest Class Doc Comment
+ * ProvisionMockSubscriptionPayloadTest Class Doc Comment
  *
  * @category    Class
- * @description UpdateCustomHostnameBody
+ * @description ProvisionMockSubscriptionPayload
  * @package     Ory\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class UpdateCustomHostnameBodyTest extends TestCase
+class ProvisionMockSubscriptionPayloadTest extends TestCase
 {
 
     /**
@@ -72,27 +72,27 @@ class UpdateCustomHostnameBodyTest extends TestCase
     }
 
     /**
-     * Test "UpdateCustomHostnameBody"
+     * Test "ProvisionMockSubscriptionPayload"
      */
-    public function testUpdateCustomHostnameBody()
+    public function testProvisionMockSubscriptionPayload()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "cookieDomain"
+     * Test attribute "identityId"
      */
-    public function testPropertyCookieDomain()
+    public function testPropertyIdentityId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "hostname"
+     * Test attribute "planOrPrice"
      */
-    public function testPropertyHostname()
+    public function testPropertyPlanOrPrice()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
