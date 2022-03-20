@@ -1,6 +1,6 @@
 <?php
 /**
- * SubmitSelfServiceSettingsFlowWithProfileMethodBody
+ * ProjectMetadata
  *
  * PHP version 7.3
  *
@@ -33,10 +33,9 @@ use \ArrayAccess;
 use \Ory\Client\ObjectSerializer;
 
 /**
- * SubmitSelfServiceSettingsFlowWithProfileMethodBody Class Doc Comment
+ * ProjectMetadata Class Doc Comment
  *
  * @category Class
- * @description nolint:deadcode,unused
  * @package  Ory\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -44,7 +43,7 @@ use \Ory\Client\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class SubmitSelfServiceSettingsFlowWithProfileMethodBody implements ModelInterface, ArrayAccess, \JsonSerializable
+class ProjectMetadata implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -53,7 +52,7 @@ class SubmitSelfServiceSettingsFlowWithProfileMethodBody implements ModelInterfa
       *
       * @var string
       */
-    protected static $openAPIModelName = 'submitSelfServiceSettingsFlowWithProfileMethodBody';
+    protected static $openAPIModelName = 'projectMetadata';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -61,9 +60,14 @@ class SubmitSelfServiceSettingsFlowWithProfileMethodBody implements ModelInterfa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'csrfToken' => 'string',
-        'method' => 'string',
-        'traits' => 'object'
+        'createdAt' => '\DateTime',
+        'hosts' => 'string[]',
+        'id' => 'string',
+        'name' => 'string',
+        'slug' => 'string',
+        'state' => 'string',
+        'subscriptionId' => 'string',
+        'updatedAt' => '\DateTime'
     ];
 
     /**
@@ -74,9 +78,14 @@ class SubmitSelfServiceSettingsFlowWithProfileMethodBody implements ModelInterfa
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'csrfToken' => null,
-        'method' => null,
-        'traits' => null
+        'createdAt' => 'date-time',
+        'hosts' => null,
+        'id' => 'uuid4',
+        'name' => null,
+        'slug' => null,
+        'state' => null,
+        'subscriptionId' => 'uuid4',
+        'updatedAt' => 'date-time'
     ];
 
     /**
@@ -106,9 +115,14 @@ class SubmitSelfServiceSettingsFlowWithProfileMethodBody implements ModelInterfa
      * @var string[]
      */
     protected static $attributeMap = [
-        'csrfToken' => 'csrf_token',
-        'method' => 'method',
-        'traits' => 'traits'
+        'createdAt' => 'created_at',
+        'hosts' => 'hosts',
+        'id' => 'id',
+        'name' => 'name',
+        'slug' => 'slug',
+        'state' => 'state',
+        'subscriptionId' => 'subscription_id',
+        'updatedAt' => 'updated_at'
     ];
 
     /**
@@ -117,9 +131,14 @@ class SubmitSelfServiceSettingsFlowWithProfileMethodBody implements ModelInterfa
      * @var string[]
      */
     protected static $setters = [
-        'csrfToken' => 'setCsrfToken',
-        'method' => 'setMethod',
-        'traits' => 'setTraits'
+        'createdAt' => 'setCreatedAt',
+        'hosts' => 'setHosts',
+        'id' => 'setId',
+        'name' => 'setName',
+        'slug' => 'setSlug',
+        'state' => 'setState',
+        'subscriptionId' => 'setSubscriptionId',
+        'updatedAt' => 'setUpdatedAt'
     ];
 
     /**
@@ -128,9 +147,14 @@ class SubmitSelfServiceSettingsFlowWithProfileMethodBody implements ModelInterfa
      * @var string[]
      */
     protected static $getters = [
-        'csrfToken' => 'getCsrfToken',
-        'method' => 'getMethod',
-        'traits' => 'getTraits'
+        'createdAt' => 'getCreatedAt',
+        'hosts' => 'getHosts',
+        'id' => 'getId',
+        'name' => 'getName',
+        'slug' => 'getSlug',
+        'state' => 'getState',
+        'subscriptionId' => 'getSubscriptionId',
+        'updatedAt' => 'getUpdatedAt'
     ];
 
     /**
@@ -174,6 +198,21 @@ class SubmitSelfServiceSettingsFlowWithProfileMethodBody implements ModelInterfa
         return self::$openAPIModelName;
     }
 
+    const STATE_RUNNING = 'running';
+    const STATE_HALTED = 'halted';
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getStateAllowableValues()
+    {
+        return [
+            self::STATE_RUNNING,
+            self::STATE_HALTED,
+        ];
+    }
 
     /**
      * Associative array for storing property values
@@ -190,9 +229,14 @@ class SubmitSelfServiceSettingsFlowWithProfileMethodBody implements ModelInterfa
      */
     public function __construct(array $data = null)
     {
-        $this->container['csrfToken'] = $data['csrfToken'] ?? null;
-        $this->container['method'] = $data['method'] ?? null;
-        $this->container['traits'] = $data['traits'] ?? null;
+        $this->container['createdAt'] = $data['createdAt'] ?? null;
+        $this->container['hosts'] = $data['hosts'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
+        $this->container['name'] = $data['name'] ?? null;
+        $this->container['slug'] = $data['slug'] ?? null;
+        $this->container['state'] = $data['state'] ?? null;
+        $this->container['subscriptionId'] = $data['subscriptionId'] ?? null;
+        $this->container['updatedAt'] = $data['updatedAt'] ?? null;
     }
 
     /**
@@ -204,11 +248,32 @@ class SubmitSelfServiceSettingsFlowWithProfileMethodBody implements ModelInterfa
     {
         $invalidProperties = [];
 
-        if ($this->container['method'] === null) {
-            $invalidProperties[] = "'method' can't be null";
+        if ($this->container['createdAt'] === null) {
+            $invalidProperties[] = "'createdAt' can't be null";
         }
-        if ($this->container['traits'] === null) {
-            $invalidProperties[] = "'traits' can't be null";
+        if ($this->container['hosts'] === null) {
+            $invalidProperties[] = "'hosts' can't be null";
+        }
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
+        }
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
+        if ($this->container['state'] === null) {
+            $invalidProperties[] = "'state' can't be null";
+        }
+        $allowedValues = $this->getStateAllowableValues();
+        if (!is_null($this->container['state']) && !in_array($this->container['state'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value '%s' for 'state', must be one of '%s'",
+                $this->container['state'],
+                implode("', '", $allowedValues)
+            );
+        }
+
+        if ($this->container['updatedAt'] === null) {
+            $invalidProperties[] = "'updatedAt' can't be null";
         }
         return $invalidProperties;
     }
@@ -226,73 +291,203 @@ class SubmitSelfServiceSettingsFlowWithProfileMethodBody implements ModelInterfa
 
 
     /**
-     * Gets csrfToken
+     * Gets createdAt
      *
-     * @return string|null
+     * @return \DateTime
      */
-    public function getCsrfToken()
+    public function getCreatedAt()
     {
-        return $this->container['csrfToken'];
+        return $this->container['createdAt'];
     }
 
     /**
-     * Sets csrfToken
+     * Sets createdAt
      *
-     * @param string|null $csrfToken The Anti-CSRF Token  This token is only required when performing browser flows.
+     * @param \DateTime $createdAt The Project's Creation Date
      *
      * @return self
      */
-    public function setCsrfToken($csrfToken)
+    public function setCreatedAt($createdAt)
     {
-        $this->container['csrfToken'] = $csrfToken;
+        $this->container['createdAt'] = $createdAt;
 
         return $this;
     }
 
     /**
-     * Gets method
+     * Gets hosts
+     *
+     * @return string[]
+     */
+    public function getHosts()
+    {
+        return $this->container['hosts'];
+    }
+
+    /**
+     * Sets hosts
+     *
+     * @param string[] $hosts hosts
+     *
+     * @return self
+     */
+    public function setHosts($hosts)
+    {
+        $this->container['hosts'] = $hosts;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
      *
      * @return string
      */
-    public function getMethod()
+    public function getId()
     {
-        return $this->container['method'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets method
+     * Sets id
      *
-     * @param string $method Method  Should be set to profile when trying to update a profile.
+     * @param string $id id
      *
      * @return self
      */
-    public function setMethod($method)
+    public function setId($id)
     {
-        $this->container['method'] = $method;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets traits
+     * Gets name
      *
-     * @return object
+     * @return string
      */
-    public function getTraits()
+    public function getName()
     {
-        return $this->container['traits'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets traits
+     * Sets name
      *
-     * @param object $traits Traits contains all of the identity's traits.
+     * @param string $name The project's name if set
      *
      * @return self
      */
-    public function setTraits($traits)
+    public function setName($name)
     {
-        $this->container['traits'] = $traits;
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets slug
+     *
+     * @return string|null
+     */
+    public function getSlug()
+    {
+        return $this->container['slug'];
+    }
+
+    /**
+     * Sets slug
+     *
+     * @param string|null $slug The project's slug
+     *
+     * @return self
+     */
+    public function setSlug($slug)
+    {
+        $this->container['slug'] = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Gets state
+     *
+     * @return string
+     */
+    public function getState()
+    {
+        return $this->container['state'];
+    }
+
+    /**
+     * Sets state
+     *
+     * @param string $state The state of the project.
+     *
+     * @return self
+     */
+    public function setState($state)
+    {
+        $allowedValues = $this->getStateAllowableValues();
+        if (!in_array($state, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'state', must be one of '%s'",
+                    $state,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['state'] = $state;
+
+        return $this;
+    }
+
+    /**
+     * Gets subscriptionId
+     *
+     * @return string|null
+     */
+    public function getSubscriptionId()
+    {
+        return $this->container['subscriptionId'];
+    }
+
+    /**
+     * Sets subscriptionId
+     *
+     * @param string|null $subscriptionId subscriptionId
+     *
+     * @return self
+     */
+    public function setSubscriptionId($subscriptionId)
+    {
+        $this->container['subscriptionId'] = $subscriptionId;
+
+        return $this;
+    }
+
+    /**
+     * Gets updatedAt
+     *
+     * @return \DateTime
+     */
+    public function getUpdatedAt()
+    {
+        return $this->container['updatedAt'];
+    }
+
+    /**
+     * Sets updatedAt
+     *
+     * @param \DateTime $updatedAt Last Time Project was Updated
+     *
+     * @return self
+     */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->container['updatedAt'] = $updatedAt;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * AdminCreateIdentityImportCredentialsPasswordTest
+ * ProjectMetadataTest
  *
  * PHP version 7.3
  *
@@ -32,15 +32,15 @@ namespace Ory\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * AdminCreateIdentityImportCredentialsPasswordTest Class Doc Comment
+ * ProjectMetadataTest Class Doc Comment
  *
  * @category    Class
- * @description AdminCreateIdentityImportCredentialsPassword
+ * @description ProjectMetadata
  * @package     Ory\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class AdminCreateIdentityImportCredentialsPasswordTest extends TestCase
+class ProjectMetadataTest extends TestCase
 {
 
     /**
@@ -72,18 +72,81 @@ class AdminCreateIdentityImportCredentialsPasswordTest extends TestCase
     }
 
     /**
-     * Test "AdminCreateIdentityImportCredentialsPassword"
+     * Test "ProjectMetadata"
      */
-    public function testAdminCreateIdentityImportCredentialsPassword()
+    public function testProjectMetadata()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "config"
+     * Test attribute "createdAt"
      */
-    public function testPropertyConfig()
+    public function testPropertyCreatedAt()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "hosts"
+     */
+    public function testPropertyHosts()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "id"
+     */
+    public function testPropertyId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "name"
+     */
+    public function testPropertyName()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "slug"
+     */
+    public function testPropertySlug()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "state"
+     */
+    public function testPropertyState()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "subscriptionId"
+     */
+    public function testPropertySubscriptionId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "updatedAt"
+     */
+    public function testPropertyUpdatedAt()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
