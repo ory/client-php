@@ -1,6 +1,6 @@
 <?php
 /**
- * UiNodeInputAttributesTest
+ * QuotaCustomDomainsTest
  *
  * PHP version 7.3
  *
@@ -32,15 +32,15 @@ namespace Ory\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * UiNodeInputAttributesTest Class Doc Comment
+ * QuotaCustomDomainsTest Class Doc Comment
  *
  * @category    Class
- * @description InputAttributes represents the attributes of an input node
+ * @description QuotaCustomDomains
  * @package     Ory\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class UiNodeInputAttributesTest extends TestCase
+class QuotaCustomDomainsTest extends TestCase
 {
 
     /**
@@ -72,90 +72,36 @@ class UiNodeInputAttributesTest extends TestCase
     }
 
     /**
-     * Test "UiNodeInputAttributes"
+     * Test "QuotaCustomDomains"
      */
-    public function testUiNodeInputAttributes()
+    public function testQuotaCustomDomains()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "disabled"
+     * Test attribute "availableDomains"
      */
-    public function testPropertyDisabled()
+    public function testPropertyAvailableDomains()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "label"
+     * Test attribute "canUse"
      */
-    public function testPropertyLabel()
+    public function testPropertyCanUse()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "usedDomains"
      */
-    public function testPropertyName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "nodeType"
-     */
-    public function testPropertyNodeType()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "onclick"
-     */
-    public function testPropertyOnclick()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "pattern"
-     */
-    public function testPropertyPattern()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "required"
-     */
-    public function testPropertyRequired()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "type"
-     */
-    public function testPropertyType()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "value"
-     */
-    public function testPropertyValue()
+    public function testPropertyUsedDomains()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

@@ -1,6 +1,6 @@
 <?php
 /**
- * UiNodeInputAttributes
+ * QuotaCustomDomains
  *
  * PHP version 7.3
  *
@@ -33,10 +33,9 @@ use \ArrayAccess;
 use \Ory\Client\ObjectSerializer;
 
 /**
- * UiNodeInputAttributes Class Doc Comment
+ * QuotaCustomDomains Class Doc Comment
  *
  * @category Class
- * @description InputAttributes represents the attributes of an input node
  * @package  Ory\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -44,7 +43,7 @@ use \Ory\Client\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class UiNodeInputAttributes implements ModelInterface, ArrayAccess, \JsonSerializable
+class QuotaCustomDomains implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -53,7 +52,7 @@ class UiNodeInputAttributes implements ModelInterface, ArrayAccess, \JsonSeriali
       *
       * @var string
       */
-    protected static $openAPIModelName = 'uiNodeInputAttributes';
+    protected static $openAPIModelName = 'QuotaCustomDomains';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -61,15 +60,9 @@ class UiNodeInputAttributes implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'disabled' => 'bool',
-        'label' => '\Ory\Client\Model\UiText',
-        'name' => 'string',
-        'nodeType' => 'string',
-        'onclick' => 'string',
-        'pattern' => 'string',
-        'required' => 'bool',
-        'type' => 'string',
-        'value' => 'mixed'
+        'availableDomains' => 'int',
+        'canUse' => 'bool',
+        'usedDomains' => 'int'
     ];
 
     /**
@@ -80,15 +73,9 @@ class UiNodeInputAttributes implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'disabled' => null,
-        'label' => null,
-        'name' => null,
-        'nodeType' => null,
-        'onclick' => null,
-        'pattern' => null,
-        'required' => null,
-        'type' => null,
-        'value' => null
+        'availableDomains' => 'int64',
+        'canUse' => null,
+        'usedDomains' => 'int64'
     ];
 
     /**
@@ -118,15 +105,9 @@ class UiNodeInputAttributes implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'disabled' => 'disabled',
-        'label' => 'label',
-        'name' => 'name',
-        'nodeType' => 'node_type',
-        'onclick' => 'onclick',
-        'pattern' => 'pattern',
-        'required' => 'required',
-        'type' => 'type',
-        'value' => 'value'
+        'availableDomains' => 'available_domains',
+        'canUse' => 'can_use',
+        'usedDomains' => 'used_domains'
     ];
 
     /**
@@ -135,15 +116,9 @@ class UiNodeInputAttributes implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'disabled' => 'setDisabled',
-        'label' => 'setLabel',
-        'name' => 'setName',
-        'nodeType' => 'setNodeType',
-        'onclick' => 'setOnclick',
-        'pattern' => 'setPattern',
-        'required' => 'setRequired',
-        'type' => 'setType',
-        'value' => 'setValue'
+        'availableDomains' => 'setAvailableDomains',
+        'canUse' => 'setCanUse',
+        'usedDomains' => 'setUsedDomains'
     ];
 
     /**
@@ -152,15 +127,9 @@ class UiNodeInputAttributes implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'disabled' => 'getDisabled',
-        'label' => 'getLabel',
-        'name' => 'getName',
-        'nodeType' => 'getNodeType',
-        'onclick' => 'getOnclick',
-        'pattern' => 'getPattern',
-        'required' => 'getRequired',
-        'type' => 'getType',
-        'value' => 'getValue'
+        'availableDomains' => 'getAvailableDomains',
+        'canUse' => 'getCanUse',
+        'usedDomains' => 'getUsedDomains'
     ];
 
     /**
@@ -220,15 +189,9 @@ class UiNodeInputAttributes implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(array $data = null)
     {
-        $this->container['disabled'] = $data['disabled'] ?? null;
-        $this->container['label'] = $data['label'] ?? null;
-        $this->container['name'] = $data['name'] ?? null;
-        $this->container['nodeType'] = $data['nodeType'] ?? null;
-        $this->container['onclick'] = $data['onclick'] ?? null;
-        $this->container['pattern'] = $data['pattern'] ?? null;
-        $this->container['required'] = $data['required'] ?? null;
-        $this->container['type'] = $data['type'] ?? null;
-        $this->container['value'] = $data['value'] ?? null;
+        $this->container['availableDomains'] = $data['availableDomains'] ?? null;
+        $this->container['canUse'] = $data['canUse'] ?? null;
+        $this->container['usedDomains'] = $data['usedDomains'] ?? null;
     }
 
     /**
@@ -240,18 +203,6 @@ class UiNodeInputAttributes implements ModelInterface, ArrayAccess, \JsonSeriali
     {
         $invalidProperties = [];
 
-        if ($this->container['disabled'] === null) {
-            $invalidProperties[] = "'disabled' can't be null";
-        }
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
-        }
-        if ($this->container['nodeType'] === null) {
-            $invalidProperties[] = "'nodeType' can't be null";
-        }
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -268,217 +219,73 @@ class UiNodeInputAttributes implements ModelInterface, ArrayAccess, \JsonSeriali
 
 
     /**
-     * Gets disabled
+     * Gets availableDomains
      *
-     * @return bool
+     * @return int|null
      */
-    public function getDisabled()
+    public function getAvailableDomains()
     {
-        return $this->container['disabled'];
+        return $this->container['availableDomains'];
     }
 
     /**
-     * Sets disabled
+     * Sets availableDomains
      *
-     * @param bool $disabled Sets the input's disabled field to true or false.
+     * @param int|null $availableDomains availableDomains
      *
      * @return self
      */
-    public function setDisabled($disabled)
+    public function setAvailableDomains($availableDomains)
     {
-        $this->container['disabled'] = $disabled;
+        $this->container['availableDomains'] = $availableDomains;
 
         return $this;
     }
 
     /**
-     * Gets label
-     *
-     * @return \Ory\Client\Model\UiText|null
-     */
-    public function getLabel()
-    {
-        return $this->container['label'];
-    }
-
-    /**
-     * Sets label
-     *
-     * @param \Ory\Client\Model\UiText|null $label label
-     *
-     * @return self
-     */
-    public function setLabel($label)
-    {
-        $this->container['label'] = $label;
-
-        return $this;
-    }
-
-    /**
-     * Gets name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     *
-     * @param string $name The input's element name.
-     *
-     * @return self
-     */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets nodeType
-     *
-     * @return string
-     */
-    public function getNodeType()
-    {
-        return $this->container['nodeType'];
-    }
-
-    /**
-     * Sets nodeType
-     *
-     * @param string $nodeType NodeType represents this node's types. It is a mirror of `node.type` and is primarily used to allow compatibility with OpenAPI 3.0.  In this struct it technically always is \"input\".
-     *
-     * @return self
-     */
-    public function setNodeType($nodeType)
-    {
-        $this->container['nodeType'] = $nodeType;
-
-        return $this;
-    }
-
-    /**
-     * Gets onclick
-     *
-     * @return string|null
-     */
-    public function getOnclick()
-    {
-        return $this->container['onclick'];
-    }
-
-    /**
-     * Sets onclick
-     *
-     * @param string|null $onclick OnClick may contain javascript which should be executed on click. This is primarily used for WebAuthn.
-     *
-     * @return self
-     */
-    public function setOnclick($onclick)
-    {
-        $this->container['onclick'] = $onclick;
-
-        return $this;
-    }
-
-    /**
-     * Gets pattern
-     *
-     * @return string|null
-     */
-    public function getPattern()
-    {
-        return $this->container['pattern'];
-    }
-
-    /**
-     * Sets pattern
-     *
-     * @param string|null $pattern The input's pattern.
-     *
-     * @return self
-     */
-    public function setPattern($pattern)
-    {
-        $this->container['pattern'] = $pattern;
-
-        return $this;
-    }
-
-    /**
-     * Gets required
+     * Gets canUse
      *
      * @return bool|null
      */
-    public function getRequired()
+    public function getCanUse()
     {
-        return $this->container['required'];
+        return $this->container['canUse'];
     }
 
     /**
-     * Sets required
+     * Sets canUse
      *
-     * @param bool|null $required Mark this input field as required.
+     * @param bool|null $canUse canUse
      *
      * @return self
      */
-    public function setRequired($required)
+    public function setCanUse($canUse)
     {
-        $this->container['required'] = $required;
+        $this->container['canUse'] = $canUse;
 
         return $this;
     }
 
     /**
-     * Gets type
+     * Gets usedDomains
      *
-     * @return string
+     * @return int|null
      */
-    public function getType()
+    public function getUsedDomains()
     {
-        return $this->container['type'];
+        return $this->container['usedDomains'];
     }
 
     /**
-     * Sets type
+     * Sets usedDomains
      *
-     * @param string $type type
+     * @param int|null $usedDomains usedDomains
      *
      * @return self
      */
-    public function setType($type)
+    public function setUsedDomains($usedDomains)
     {
-        $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets value
-     *
-     * @return mixed|null
-     */
-    public function getValue()
-    {
-        return $this->container['value'];
-    }
-
-    /**
-     * Sets value
-     *
-     * @param mixed|null $value The input's value.
-     *
-     * @return self
-     */
-    public function setValue($value)
-    {
-        $this->container['value'] = $value;
+        $this->container['usedDomains'] = $usedDomains;
 
         return $this;
     }
