@@ -82,6 +82,7 @@ docs/Model/OAuth2Client.md
 docs/Model/OAuth2ConsentRequest.md
 docs/Model/OAuth2ConsentRequestOpenIDConnectContext.md
 docs/Model/OAuth2ConsentSession.md
+docs/Model/OAuth2ConsentSessionExpiresAt.md
 docs/Model/OAuth2LoginRequest.md
 docs/Model/OAuth2LogoutRequest.md
 docs/Model/OAuth2TokenResponse.md
@@ -260,6 +261,7 @@ lib/Model/OAuth2Client.php
 lib/Model/OAuth2ConsentRequest.php
 lib/Model/OAuth2ConsentRequestOpenIDConnectContext.php
 lib/Model/OAuth2ConsentSession.php
+lib/Model/OAuth2ConsentSessionExpiresAt.php
 lib/Model/OAuth2LoginRequest.php
 lib/Model/OAuth2LogoutRequest.php
 lib/Model/OAuth2TokenResponse.php
@@ -434,6 +436,7 @@ test/Model/OAuth2ApiErrorTest.php
 test/Model/OAuth2ClientTest.php
 test/Model/OAuth2ConsentRequestOpenIDConnectContextTest.php
 test/Model/OAuth2ConsentRequestTest.php
+test/Model/OAuth2ConsentSessionExpiresAtTest.php
 test/Model/OAuth2ConsentSessionTest.php
 test/Model/OAuth2LoginRequestTest.php
 test/Model/OAuth2LogoutRequestTest.php
