@@ -1,11 +1,9 @@
-# # InviteQuota
+# # Usage
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**projectId** | **string** |  | [optional]
-**remainingSeats** | **int** |  | [optional]
-**totalSeats** | **int** |  | [optional]
+**genericUsage** | [**\Ory\Client\Model\GenericUsage**](GenericUsage.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
