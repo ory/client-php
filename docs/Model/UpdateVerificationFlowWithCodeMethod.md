@@ -1,4 +1,4 @@
-# # UpdateVerificationFlowWithCodeMethodBody
+# # UpdateVerificationFlowWithCodeMethod
 
 ## Properties
 
