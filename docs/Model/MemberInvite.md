@@ -1,4 +1,4 @@
-# # ProjectInvite
+# # MemberInvite
 
 ## Properties
 
