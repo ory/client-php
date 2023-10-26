@@ -1,4 +1,4 @@
-# # CORS
+# # ProjectCors
 
 ## Properties
 
