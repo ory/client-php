@@ -1,13 +1,13 @@
 # Ory\Client\EventsApi
 
-All URIs are relative to https://playground.projects.oryapis.com.
+All URIs are relative to https://playground.projects.oryapis.com, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**createEventStream()**](EventsApi.md#createEventStream) | **POST** /projects/{project_id}/eventstreams | Create an event stream for your project.
-[**deleteEventStream()**](EventsApi.md#deleteEventStream) | **DELETE** /projects/{project_id}/eventstreams/{event_stream_id} | Remove an event stream from a project
-[**listEventStreams()**](EventsApi.md#listEventStreams) | **GET** /projects/{project_id}/eventstreams | List all event streams for the project. This endpoint is not paginated.
-[**setEventStream()**](EventsApi.md#setEventStream) | **PUT** /projects/{project_id}/eventstreams/{event_stream_id} | Update an event stream for a project.
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**createEventStream()**](EventsApi.md#createEventStream) | **POST** /projects/{project_id}/eventstreams | Create an event stream for your project. |
+| [**deleteEventStream()**](EventsApi.md#deleteEventStream) | **DELETE** /projects/{project_id}/eventstreams/{event_stream_id} | Remove an event stream from a project |
+| [**listEventStreams()**](EventsApi.md#listEventStreams) | **GET** /projects/{project_id}/eventstreams | List all event streams for the project. This endpoint is not paginated. |
+| [**setEventStream()**](EventsApi.md#setEventStream) | **PUT** /projects/{project_id}/eventstreams/{event_stream_id} | Update an event stream for a project. |
 
 
 ## `createEventStream()`
@@ -48,10 +48,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **projectId** | **string**| Project ID  The project&#39;s ID. |
- **createEventStreamBody** | [**\Ory\Client\Model\CreateEventStreamBody**](../Model/CreateEventStreamBody.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **projectId** | **string**| Project ID  The project&#39;s ID. | |
+| **createEventStreamBody** | [**\Ory\Client\Model\CreateEventStreamBody**](../Model/CreateEventStreamBody.md)|  | |
 
 ### Return type
 
@@ -109,10 +109,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **projectId** | **string**| Project ID  The project&#39;s ID. |
- **eventStreamId** | **string**| Event Stream ID  The ID of the event stream to be deleted, as returned when created. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **projectId** | **string**| Project ID  The project&#39;s ID. | |
+| **eventStreamId** | **string**| Event Stream ID  The ID of the event stream to be deleted, as returned when created. | |
 
 ### Return type
 
@@ -168,9 +168,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **projectId** | **string**| Project ID  The project&#39;s ID. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **projectId** | **string**| Project ID  The project&#39;s ID. | |
 
 ### Return type
 
@@ -228,11 +228,11 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **projectId** | **string**| Project ID  The project&#39;s ID. |
- **eventStreamId** | **string**| Event Stream ID  The event stream&#39;s ID. |
- **setEventStreamBody** | [**\Ory\Client\Model\SetEventStreamBody**](../Model/SetEventStreamBody.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **projectId** | **string**| Project ID  The project&#39;s ID. | |
+| **eventStreamId** | **string**| Event Stream ID  The event stream&#39;s ID. | |
+| **setEventStreamBody** | [**\Ory\Client\Model\SetEventStreamBody**](../Model/SetEventStreamBody.md)|  | [optional] |
 
 ### Return type
 

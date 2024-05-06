@@ -1,28 +1,28 @@
 # Ory\Client\ProjectApi
 
-All URIs are relative to https://playground.projects.oryapis.com.
+All URIs are relative to https://playground.projects.oryapis.com, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**createOrganization()**](ProjectApi.md#createOrganization) | **POST** /projects/{project_id}/organizations | 
-[**createProject()**](ProjectApi.md#createProject) | **POST** /projects | Create a Project
-[**createProjectApiKey()**](ProjectApi.md#createProjectApiKey) | **POST** /projects/{project}/tokens | Create project API token
-[**deleteOrganization()**](ProjectApi.md#deleteOrganization) | **DELETE** /projects/{project_id}/organizations/{organization_id} | Delete a B2B SSO Organization for a project.
-[**deleteProjectApiKey()**](ProjectApi.md#deleteProjectApiKey) | **DELETE** /projects/{project}/tokens/{token_id} | Delete project API token
-[**getActiveProjectInConsole()**](ProjectApi.md#getActiveProjectInConsole) | **GET** /console/active/project | Returns the Ory Network Project selected in the Ory Network Console
-[**getOrganization()**](ProjectApi.md#getOrganization) | **GET** /projects/{project_id}/organizations/{organization_id} | Returns a B2B SSO Organization for a project by it&#39;s ID.
-[**getProject()**](ProjectApi.md#getProject) | **GET** /projects/{project_id} | Get a Project
-[**getProjectMembers()**](ProjectApi.md#getProjectMembers) | **GET** /projects/{project}/members | Get all members associated with this project
-[**getProjectMetrics()**](ProjectApi.md#getProjectMetrics) | **GET** /projects/{project_id}/metrics | 
-[**listOrganizations()**](ProjectApi.md#listOrganizations) | **GET** /projects/{project_id}/organizations | 
-[**listProjectApiKeys()**](ProjectApi.md#listProjectApiKeys) | **GET** /projects/{project}/tokens | List a project&#39;s API Tokens
-[**listProjects()**](ProjectApi.md#listProjects) | **GET** /projects | List All Projects
-[**patchProject()**](ProjectApi.md#patchProject) | **PATCH** /projects/{project_id} | Patch an Ory Network Project Configuration
-[**purgeProject()**](ProjectApi.md#purgeProject) | **DELETE** /projects/{project_id} | Irrecoverably purge a project
-[**removeProjectMember()**](ProjectApi.md#removeProjectMember) | **DELETE** /projects/{project}/members/{member} | Remove a member associated with this project
-[**setActiveProjectInConsole()**](ProjectApi.md#setActiveProjectInConsole) | **PUT** /console/active/project | Sets the Ory Network Project active in the Ory Network Console
-[**setProject()**](ProjectApi.md#setProject) | **PUT** /projects/{project_id} | Update an Ory Network Project Configuration
-[**updateOrganization()**](ProjectApi.md#updateOrganization) | **PUT** /projects/{project_id}/organizations/{organization_id} | Update a B2B SSO Organization for a project.
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**createOrganization()**](ProjectApi.md#createOrganization) | **POST** /projects/{project_id}/organizations |  |
+| [**createProject()**](ProjectApi.md#createProject) | **POST** /projects | Create a Project |
+| [**createProjectApiKey()**](ProjectApi.md#createProjectApiKey) | **POST** /projects/{project}/tokens | Create project API token |
+| [**deleteOrganization()**](ProjectApi.md#deleteOrganization) | **DELETE** /projects/{project_id}/organizations/{organization_id} | Delete a B2B SSO Organization for a project. |
+| [**deleteProjectApiKey()**](ProjectApi.md#deleteProjectApiKey) | **DELETE** /projects/{project}/tokens/{token_id} | Delete project API token |
+| [**getActiveProjectInConsole()**](ProjectApi.md#getActiveProjectInConsole) | **GET** /console/active/project | Returns the Ory Network Project selected in the Ory Network Console |
+| [**getOrganization()**](ProjectApi.md#getOrganization) | **GET** /projects/{project_id}/organizations/{organization_id} | Returns a B2B SSO Organization for a project by it&#39;s ID. |
+| [**getProject()**](ProjectApi.md#getProject) | **GET** /projects/{project_id} | Get a Project |
+| [**getProjectMembers()**](ProjectApi.md#getProjectMembers) | **GET** /projects/{project}/members | Get all members associated with this project |
+| [**getProjectMetrics()**](ProjectApi.md#getProjectMetrics) | **GET** /projects/{project_id}/metrics |  |
+| [**listOrganizations()**](ProjectApi.md#listOrganizations) | **GET** /projects/{project_id}/organizations |  |
+| [**listProjectApiKeys()**](ProjectApi.md#listProjectApiKeys) | **GET** /projects/{project}/tokens | List a project&#39;s API Tokens |
+| [**listProjects()**](ProjectApi.md#listProjects) | **GET** /projects | List All Projects |
+| [**patchProject()**](ProjectApi.md#patchProject) | **PATCH** /projects/{project_id} | Patch an Ory Network Project Configuration |
+| [**purgeProject()**](ProjectApi.md#purgeProject) | **DELETE** /projects/{project_id} | Irrecoverably purge a project |
+| [**removeProjectMember()**](ProjectApi.md#removeProjectMember) | **DELETE** /projects/{project}/members/{member} | Remove a member associated with this project |
+| [**setActiveProjectInConsole()**](ProjectApi.md#setActiveProjectInConsole) | **PUT** /console/active/project | Sets the Ory Network Project active in the Ory Network Console |
+| [**setProject()**](ProjectApi.md#setProject) | **PUT** /projects/{project_id} | Update an Ory Network Project Configuration |
+| [**updateOrganization()**](ProjectApi.md#updateOrganization) | **PUT** /projects/{project_id}/organizations/{organization_id} | Update a B2B SSO Organization for a project. |
 
 
 ## `createOrganization()`
@@ -65,10 +65,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **projectId** | **string**| Project ID  The project&#39;s ID. |
- **organizationBody** | [**\Ory\Client\Model\OrganizationBody**](../Model/OrganizationBody.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **projectId** | **string**| Project ID  The project&#39;s ID. | |
+| **organizationBody** | [**\Ory\Client\Model\OrganizationBody**](../Model/OrganizationBody.md)|  | [optional] |
 
 ### Return type
 
@@ -126,9 +126,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **createProjectBody** | [**\Ory\Client\Model\CreateProjectBody**](../Model/CreateProjectBody.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **createProjectBody** | [**\Ory\Client\Model\CreateProjectBody**](../Model/CreateProjectBody.md)|  | [optional] |
 
 ### Return type
 
@@ -150,7 +150,7 @@ Name | Type | Description  | Notes
 ## `createProjectApiKey()`
 
 ```php
-createProjectApiKey($project, $inlineObject3): \Ory\Client\Model\ProjectApiKey
+createProjectApiKey($project, $createProjectApiKeyRequest): \Ory\Client\Model\ProjectApiKey
 ```
 
 Create project API token
@@ -175,10 +175,10 @@ $apiInstance = new Ory\Client\Api\ProjectApi(
     $config
 );
 $project = 'project_example'; // string | The Project ID or Project slug
-$inlineObject3 = new \Ory\Client\Model\InlineObject3(); // \Ory\Client\Model\InlineObject3
+$createProjectApiKeyRequest = new \Ory\Client\Model\CreateProjectApiKeyRequest(); // \Ory\Client\Model\CreateProjectApiKeyRequest
 
 try {
-    $result = $apiInstance->createProjectApiKey($project, $inlineObject3);
+    $result = $apiInstance->createProjectApiKey($project, $createProjectApiKeyRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProjectApi->createProjectApiKey: ', $e->getMessage(), PHP_EOL;
@@ -187,10 +187,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **project** | **string**| The Project ID or Project slug |
- **inlineObject3** | [**\Ory\Client\Model\InlineObject3**](../Model/InlineObject3.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **project** | **string**| The Project ID or Project slug | |
+| **createProjectApiKeyRequest** | [**\Ory\Client\Model\CreateProjectApiKeyRequest**](../Model/CreateProjectApiKeyRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -246,10 +246,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **projectId** | **string**| Project ID  The project&#39;s ID. |
- **organizationId** | **string**| Organization ID  The Organization&#39;s ID. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **projectId** | **string**| Project ID  The project&#39;s ID. | |
+| **organizationId** | **string**| Organization ID  The Organization&#39;s ID. | |
 
 ### Return type
 
@@ -307,10 +307,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **project** | **string**| The Project ID or Project slug |
- **tokenId** | **string**| The Token ID |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **project** | **string**| The Project ID or Project slug | |
+| **tokenId** | **string**| The Token ID | |
 
 ### Return type
 
@@ -424,10 +424,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **projectId** | **string**| Project ID  The project&#39;s ID. |
- **organizationId** | **string**| Organization ID  The Organization&#39;s ID. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **projectId** | **string**| Project ID  The project&#39;s ID. | |
+| **organizationId** | **string**| Organization ID  The Organization&#39;s ID. | |
 
 ### Return type
 
@@ -485,9 +485,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **projectId** | **string**| Project ID  The project&#39;s ID. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **projectId** | **string**| Project ID  The project&#39;s ID. | |
 
 ### Return type
 
@@ -545,9 +545,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **project** | **string**|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **project** | **string**|  | |
 
 ### Return type
 
@@ -609,13 +609,13 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **projectId** | **string**| Project ID |
- **eventType** | **string**| The event type to query for |
- **resolution** | **string**| The resolution of the buckets  The minimum resolution is 1 minute. |
- **from** | **\DateTime**| The start RFC3339 date of the time window |
- **to** | **\DateTime**| The end RFC3339 date of the time window |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **projectId** | **string**| Project ID | |
+| **eventType** | **string**| The event type to query for | |
+| **resolution** | **string**| The resolution of the buckets  The minimum resolution is 1 minute. | |
+| **from** | **\DateTime**| The start RFC3339 date of the time window | |
+| **to** | **\DateTime**| The end RFC3339 date of the time window | |
 
 ### Return type
 
@@ -671,9 +671,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **projectId** | **string**| Project ID  The project&#39;s ID. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **projectId** | **string**| Project ID  The project&#39;s ID. | |
 
 ### Return type
 
@@ -731,9 +731,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **project** | **string**| The Project ID or Project slug |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **project** | **string**| The Project ID or Project slug | |
 
 ### Return type
 
@@ -849,10 +849,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **projectId** | **string**| Project ID  The project&#39;s ID. |
- **jsonPatch** | [**\Ory\Client\Model\JsonPatch[]**](../Model/JsonPatch.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **projectId** | **string**| Project ID  The project&#39;s ID. | |
+| **jsonPatch** | [**\Ory\Client\Model\JsonPatch[]**](../Model/JsonPatch.md)|  | [optional] |
 
 ### Return type
 
@@ -909,9 +909,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **projectId** | **string**| Project ID  The project&#39;s ID. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **projectId** | **string**| Project ID  The project&#39;s ID. | |
 
 ### Return type
 
@@ -969,10 +969,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **project** | **string**|  |
- **member** | **string**|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **project** | **string**|  | |
+| **member** | **string**|  | |
 
 ### Return type
 
@@ -1029,9 +1029,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **setActiveProjectInConsoleBody** | [**\Ory\Client\Model\SetActiveProjectInConsoleBody**](../Model/SetActiveProjectInConsoleBody.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **setActiveProjectInConsoleBody** | [**\Ory\Client\Model\SetActiveProjectInConsoleBody**](../Model/SetActiveProjectInConsoleBody.md)|  | [optional] |
 
 ### Return type
 
@@ -1090,10 +1090,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **projectId** | **string**| Project ID  The project&#39;s ID. |
- **setProject** | [**\Ory\Client\Model\SetProject**](../Model/SetProject.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **projectId** | **string**| Project ID  The project&#39;s ID. | |
+| **setProject** | [**\Ory\Client\Model\SetProject**](../Model/SetProject.md)|  | [optional] |
 
 ### Return type
 
@@ -1151,11 +1151,11 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **projectId** | **string**| Project ID  The project&#39;s ID. |
- **organizationId** | **string**| Organization ID  The Organization&#39;s ID. |
- **organizationBody** | [**\Ory\Client\Model\OrganizationBody**](../Model/OrganizationBody.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **projectId** | **string**| Project ID  The project&#39;s ID. | |
+| **organizationId** | **string**| Organization ID  The Organization&#39;s ID. | |
+| **organizationBody** | [**\Ory\Client\Model\OrganizationBody**](../Model/OrganizationBody.md)|  | [optional] |
 
 ### Return type
 
