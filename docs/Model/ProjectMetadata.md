@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **hosts** | **string[]** |  |
 **id** | **string** | The project&#39;s ID. | [readonly]
 **name** | **string** | The project&#39;s name if set |
-**slug** | **string** | The project&#39;s slug | [optional] [readonly]
+**slug** | **string** | The project&#39;s slug | [readonly]
 **state** | **string** | The state of the project. running Running halted Halted deleted Deleted |
 **subscriptionId** | **string** |  | [optional]
 **subscriptionPlan** | **string** |  | [optional]

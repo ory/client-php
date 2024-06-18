@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **corsAdmin** | [**\Ory\Client\Model\ProjectCors**](ProjectCors.md) |  | [optional]
 **corsPublic** | [**\Ory\Client\Model\ProjectCors**](ProjectCors.md) |  | [optional]
+**environment** | **string** | The environment of the project. prod Production stage Staging dev Development |
 **id** | **string** | The project&#39;s ID. | [readonly]
 **name** | **string** | The name of the project. |
 **revisionId** | **string** | The configuration revision ID. | [readonly]

@@ -1,6 +1,6 @@
 # Ory\Client\EventsApi
 
-All URIs are relative to https://playground.projects.oryapis.com, except if the operation defines another base path.
+All URIs are relative to https://.projects.oryapis.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
@@ -15,7 +15,8 @@ All URIs are relative to https://playground.projects.oryapis.com, except if the 
 ```php
 createEventStream($projectId, $createEventStreamBody): \Ory\Client\Model\EventStream
 ```
-
+### URI(s):
+- https://api.console.ory.sh The Ory Network control plane API which is used to manage your Ory Network projects and workspaces.
 Create an event stream for your project.
 
 ### Example
@@ -25,8 +26,10 @@ Create an event stream for your project.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: oryAccessToken
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure API key authorization: oryNetworkCookie
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('ory_session_ory', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ory_session_ory', 'Bearer');
 
 
 $apiInstance = new Ory\Client\Api\EventsApi(
@@ -38,8 +41,12 @@ $apiInstance = new Ory\Client\Api\EventsApi(
 $projectId = 'projectId_example'; // string | Project ID  The project's ID.
 $createEventStreamBody = new \Ory\Client\Model\CreateEventStreamBody(); // \Ory\Client\Model\CreateEventStreamBody
 
+$hostIndex = 0;
+$variables = [
+];
+
 try {
-    $result = $apiInstance->createEventStream($projectId, $createEventStreamBody);
+    $result = $apiInstance->createEventStream($projectId, $createEventStreamBody, $hostIndex, $variables);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->createEventStream: ', $e->getMessage(), PHP_EOL;
@@ -52,6 +59,8 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **projectId** | **string**| Project ID  The project&#39;s ID. | |
 | **createEventStreamBody** | [**\Ory\Client\Model\CreateEventStreamBody**](../Model/CreateEventStreamBody.md)|  | |
+| hostIndex | null|int | Host index. Defaults to null. If null, then the library will use $this->hostIndex instead | [optional] |
+| variables | array | Associative array of variables to pass to the host. Defaults to empty array. | [optional] |
 
 ### Return type
 
@@ -59,7 +68,7 @@ try {
 
 ### Authorization
 
-[oryAccessToken](../../README.md#oryAccessToken)
+[oryNetworkCookie](../../README.md#oryNetworkCookie)
 
 ### HTTP request headers
 
@@ -75,7 +84,8 @@ try {
 ```php
 deleteEventStream($projectId, $eventStreamId)
 ```
-
+### URI(s):
+- https://api.console.ory.sh The Ory Network control plane API which is used to manage your Ory Network projects and workspaces.
 Remove an event stream from a project
 
 Remove an event stream from a project.
@@ -87,8 +97,10 @@ Remove an event stream from a project.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: oryAccessToken
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure API key authorization: oryNetworkCookie
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('ory_session_ory', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ory_session_ory', 'Bearer');
 
 
 $apiInstance = new Ory\Client\Api\EventsApi(
@@ -100,8 +112,12 @@ $apiInstance = new Ory\Client\Api\EventsApi(
 $projectId = 'projectId_example'; // string | Project ID  The project's ID.
 $eventStreamId = 'eventStreamId_example'; // string | Event Stream ID  The ID of the event stream to be deleted, as returned when created.
 
+$hostIndex = 0;
+$variables = [
+];
+
 try {
-    $apiInstance->deleteEventStream($projectId, $eventStreamId);
+    $apiInstance->deleteEventStream($projectId, $eventStreamId, $hostIndex, $variables);
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->deleteEventStream: ', $e->getMessage(), PHP_EOL;
 }
@@ -113,6 +129,8 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **projectId** | **string**| Project ID  The project&#39;s ID. | |
 | **eventStreamId** | **string**| Event Stream ID  The ID of the event stream to be deleted, as returned when created. | |
+| hostIndex | null|int | Host index. Defaults to null. If null, then the library will use $this->hostIndex instead | [optional] |
+| variables | array | Associative array of variables to pass to the host. Defaults to empty array. | [optional] |
 
 ### Return type
 
@@ -120,7 +138,7 @@ void (empty response body)
 
 ### Authorization
 
-[oryAccessToken](../../README.md#oryAccessToken)
+[oryNetworkCookie](../../README.md#oryNetworkCookie)
 
 ### HTTP request headers
 
@@ -136,7 +154,8 @@ void (empty response body)
 ```php
 listEventStreams($projectId): \Ory\Client\Model\ListEventStreams
 ```
-
+### URI(s):
+- https://api.console.ory.sh The Ory Network control plane API which is used to manage your Ory Network projects and workspaces.
 List all event streams for the project. This endpoint is not paginated.
 
 ### Example
@@ -146,8 +165,10 @@ List all event streams for the project. This endpoint is not paginated.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: oryAccessToken
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure API key authorization: oryNetworkCookie
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('ory_session_ory', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ory_session_ory', 'Bearer');
 
 
 $apiInstance = new Ory\Client\Api\EventsApi(
@@ -158,8 +179,12 @@ $apiInstance = new Ory\Client\Api\EventsApi(
 );
 $projectId = 'projectId_example'; // string | Project ID  The project's ID.
 
+$hostIndex = 0;
+$variables = [
+];
+
 try {
-    $result = $apiInstance->listEventStreams($projectId);
+    $result = $apiInstance->listEventStreams($projectId, $hostIndex, $variables);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->listEventStreams: ', $e->getMessage(), PHP_EOL;
@@ -171,6 +196,8 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **projectId** | **string**| Project ID  The project&#39;s ID. | |
+| hostIndex | null|int | Host index. Defaults to null. If null, then the library will use $this->hostIndex instead | [optional] |
+| variables | array | Associative array of variables to pass to the host. Defaults to empty array. | [optional] |
 
 ### Return type
 
@@ -178,7 +205,7 @@ try {
 
 ### Authorization
 
-[oryAccessToken](../../README.md#oryAccessToken)
+[oryNetworkCookie](../../README.md#oryNetworkCookie)
 
 ### HTTP request headers
 
@@ -194,7 +221,8 @@ try {
 ```php
 setEventStream($projectId, $eventStreamId, $setEventStreamBody): \Ory\Client\Model\EventStream
 ```
-
+### URI(s):
+- https://api.console.ory.sh The Ory Network control plane API which is used to manage your Ory Network projects and workspaces.
 Update an event stream for a project.
 
 ### Example
@@ -204,8 +232,10 @@ Update an event stream for a project.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: oryAccessToken
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure API key authorization: oryNetworkCookie
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('ory_session_ory', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ory_session_ory', 'Bearer');
 
 
 $apiInstance = new Ory\Client\Api\EventsApi(
@@ -218,8 +248,12 @@ $projectId = 'projectId_example'; // string | Project ID  The project's ID.
 $eventStreamId = 'eventStreamId_example'; // string | Event Stream ID  The event stream's ID.
 $setEventStreamBody = new \Ory\Client\Model\SetEventStreamBody(); // \Ory\Client\Model\SetEventStreamBody
 
+$hostIndex = 0;
+$variables = [
+];
+
 try {
-    $result = $apiInstance->setEventStream($projectId, $eventStreamId, $setEventStreamBody);
+    $result = $apiInstance->setEventStream($projectId, $eventStreamId, $setEventStreamBody, $hostIndex, $variables);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->setEventStream: ', $e->getMessage(), PHP_EOL;
@@ -233,6 +267,8 @@ try {
 | **projectId** | **string**| Project ID  The project&#39;s ID. | |
 | **eventStreamId** | **string**| Event Stream ID  The event stream&#39;s ID. | |
 | **setEventStreamBody** | [**\Ory\Client\Model\SetEventStreamBody**](../Model/SetEventStreamBody.md)|  | [optional] |
+| hostIndex | null|int | Host index. Defaults to null. If null, then the library will use $this->hostIndex instead | [optional] |
+| variables | array | Associative array of variables to pass to the host. Defaults to empty array. | [optional] |
 
 ### Return type
 
@@ -240,7 +276,7 @@ try {
 
 ### Authorization
 
-[oryAccessToken](../../README.md#oryAccessToken)
+[oryNetworkCookie](../../README.md#oryNetworkCookie)
 
 ### HTTP request headers
 
