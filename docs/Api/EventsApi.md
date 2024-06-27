@@ -26,10 +26,8 @@ Create an event stream for your project.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: oryNetworkCookie
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('ory_session_ory', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ory_session_ory', 'Bearer');
+// Configure Bearer authorization: oryWorkspaceApiKey
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Ory\Client\Api\EventsApi(
@@ -68,7 +66,7 @@ try {
 
 ### Authorization
 
-[oryNetworkCookie](../../README.md#oryNetworkCookie)
+[oryWorkspaceApiKey](../../README.md#oryWorkspaceApiKey)
 
 ### HTTP request headers
 
@@ -97,10 +95,8 @@ Remove an event stream from a project.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: oryNetworkCookie
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('ory_session_ory', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ory_session_ory', 'Bearer');
+// Configure Bearer authorization: oryWorkspaceApiKey
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Ory\Client\Api\EventsApi(
@@ -138,7 +134,7 @@ void (empty response body)
 
 ### Authorization
 
-[oryNetworkCookie](../../README.md#oryNetworkCookie)
+[oryWorkspaceApiKey](../../README.md#oryWorkspaceApiKey)
 
 ### HTTP request headers
 
@@ -165,10 +161,8 @@ List all event streams for the project. This endpoint is not paginated.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: oryNetworkCookie
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('ory_session_ory', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ory_session_ory', 'Bearer');
+// Configure Bearer authorization: oryWorkspaceApiKey
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Ory\Client\Api\EventsApi(
@@ -205,7 +199,7 @@ try {
 
 ### Authorization
 
-[oryNetworkCookie](../../README.md#oryNetworkCookie)
+[oryWorkspaceApiKey](../../README.md#oryWorkspaceApiKey)
 
 ### HTTP request headers
 
@@ -232,10 +226,8 @@ Update an event stream for a project.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: oryNetworkCookie
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('ory_session_ory', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ory_session_ory', 'Bearer');
+// Configure Bearer authorization: oryWorkspaceApiKey
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Ory\Client\Api\EventsApi(
@@ -276,7 +268,7 @@ try {
 
 ### Authorization
 
-[oryNetworkCookie](../../README.md#oryNetworkCookie)
+[oryWorkspaceApiKey](../../README.md#oryWorkspaceApiKey)
 
 ### HTTP request headers
 

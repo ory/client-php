@@ -27,10 +27,8 @@ Create a new workspace
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: oryNetworkCookie
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('ory_session_ory', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ory_session_ory', 'Bearer');
+// Configure Bearer authorization: oryWorkspaceApiKey
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Ory\Client\Api\WorkspaceApi(
@@ -67,7 +65,7 @@ try {
 
 ### Authorization
 
-[oryNetworkCookie](../../README.md#oryNetworkCookie)
+[oryWorkspaceApiKey](../../README.md#oryWorkspaceApiKey)
 
 ### HTTP request headers
 
@@ -96,10 +94,8 @@ Any workspace member can access this endpoint.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: oryNetworkCookie
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('ory_session_ory', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ory_session_ory', 'Bearer');
+// Configure Bearer authorization: oryWorkspaceApiKey
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Ory\Client\Api\WorkspaceApi(
@@ -136,7 +132,7 @@ try {
 
 ### Authorization
 
-[oryNetworkCookie](../../README.md#oryNetworkCookie)
+[oryWorkspaceApiKey](../../README.md#oryWorkspaceApiKey)
 
 ### HTTP request headers
 
@@ -165,10 +161,8 @@ Any workspace member can access this endpoint.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: oryNetworkCookie
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('ory_session_ory', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ory_session_ory', 'Bearer');
+// Configure Bearer authorization: oryWorkspaceApiKey
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Ory\Client\Api\WorkspaceApi(
@@ -205,7 +199,7 @@ try {
 
 ### Authorization
 
-[oryNetworkCookie](../../README.md#oryNetworkCookie)
+[oryWorkspaceApiKey](../../README.md#oryWorkspaceApiKey)
 
 ### HTTP request headers
 
@@ -232,10 +226,8 @@ List workspaces the user is a member of
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: oryNetworkCookie
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('ory_session_ory', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ory_session_ory', 'Bearer');
+// Configure Bearer authorization: oryWorkspaceApiKey
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Ory\Client\Api\WorkspaceApi(
@@ -274,7 +266,7 @@ try {
 
 ### Authorization
 
-[oryNetworkCookie](../../README.md#oryNetworkCookie)
+[oryWorkspaceApiKey](../../README.md#oryWorkspaceApiKey)
 
 ### HTTP request headers
 
@@ -303,10 +295,8 @@ Workspace members with the role `OWNER` can access this endpoint.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: oryNetworkCookie
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('ory_session_ory', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ory_session_ory', 'Bearer');
+// Configure Bearer authorization: oryWorkspaceApiKey
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Ory\Client\Api\WorkspaceApi(
@@ -345,7 +335,7 @@ try {
 
 ### Authorization
 
-[oryNetworkCookie](../../README.md#oryNetworkCookie)
+[oryWorkspaceApiKey](../../README.md#oryWorkspaceApiKey)
 
 ### HTTP request headers
 

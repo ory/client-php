@@ -278,6 +278,7 @@ docs/Model/VerificationFlowState.md
 docs/Model/Version.md
 docs/Model/Warning.md
 docs/Model/Workspace.md
+docs/Model/WorkspaceApiKey.md
 git_push.sh
 lib/Api/CourierApi.php
 lib/Api/EventsApi.php
@@ -557,6 +558,7 @@ lib/Model/VerificationFlowState.php
 lib/Model/Version.php
 lib/Model/Warning.php
 lib/Model/Workspace.php
+lib/Model/WorkspaceApiKey.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
 test/Api/CourierApiTest.php
@@ -832,4 +834,5 @@ test/Model/VerificationFlowStateTest.php
 test/Model/VerificationFlowTest.php
 test/Model/VersionTest.php
 test/Model/WarningTest.php
+test/Model/WorkspaceApiKeyTest.php
 test/Model/WorkspaceTest.php

@@ -40,10 +40,8 @@ Create a B2B SSO Organization
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: oryNetworkCookie
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('ory_session_ory', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ory_session_ory', 'Bearer');
+// Configure Bearer authorization: oryWorkspaceApiKey
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Ory\Client\Api\ProjectApi(
@@ -82,7 +80,7 @@ try {
 
 ### Authorization
 
-[oryNetworkCookie](../../README.md#oryNetworkCookie)
+[oryWorkspaceApiKey](../../README.md#oryWorkspaceApiKey)
 
 ### HTTP request headers
 
@@ -111,10 +109,8 @@ Creates a new project.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: oryNetworkCookie
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('ory_session_ory', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ory_session_ory', 'Bearer');
+// Configure Bearer authorization: oryWorkspaceApiKey
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Ory\Client\Api\ProjectApi(
@@ -151,7 +147,7 @@ try {
 
 ### Authorization
 
-[oryNetworkCookie](../../README.md#oryNetworkCookie)
+[oryWorkspaceApiKey](../../README.md#oryWorkspaceApiKey)
 
 ### HTTP request headers
 
@@ -180,10 +176,8 @@ Create an API token for a project.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: oryNetworkCookie
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('ory_session_ory', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ory_session_ory', 'Bearer');
+// Configure Bearer authorization: oryWorkspaceApiKey
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Ory\Client\Api\ProjectApi(
@@ -222,7 +216,7 @@ try {
 
 ### Authorization
 
-[oryNetworkCookie](../../README.md#oryNetworkCookie)
+[oryWorkspaceApiKey](../../README.md#oryWorkspaceApiKey)
 
 ### HTTP request headers
 
@@ -251,10 +245,8 @@ Delete a B2B SSO Organization for a project
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: oryNetworkCookie
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('ory_session_ory', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ory_session_ory', 'Bearer');
+// Configure Bearer authorization: oryWorkspaceApiKey
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Ory\Client\Api\ProjectApi(
@@ -292,7 +284,7 @@ void (empty response body)
 
 ### Authorization
 
-[oryNetworkCookie](../../README.md#oryNetworkCookie)
+[oryWorkspaceApiKey](../../README.md#oryWorkspaceApiKey)
 
 ### HTTP request headers
 
@@ -321,10 +313,8 @@ Deletes an API token and immediately removes it.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: oryNetworkCookie
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('ory_session_ory', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ory_session_ory', 'Bearer');
+// Configure Bearer authorization: oryWorkspaceApiKey
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Ory\Client\Api\ProjectApi(
@@ -362,7 +352,7 @@ void (empty response body)
 
 ### Authorization
 
-[oryNetworkCookie](../../README.md#oryNetworkCookie)
+[oryWorkspaceApiKey](../../README.md#oryWorkspaceApiKey)
 
 ### HTTP request headers
 
@@ -389,10 +379,8 @@ Returns a B2B SSO Organization for a project by its ID
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: oryNetworkCookie
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('ory_session_ory', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ory_session_ory', 'Bearer');
+// Configure Bearer authorization: oryWorkspaceApiKey
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Ory\Client\Api\ProjectApi(
@@ -431,7 +419,7 @@ try {
 
 ### Authorization
 
-[oryNetworkCookie](../../README.md#oryNetworkCookie)
+[oryWorkspaceApiKey](../../README.md#oryWorkspaceApiKey)
 
 ### HTTP request headers
 
@@ -460,10 +448,8 @@ Get a projects you have access to by its ID.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: oryNetworkCookie
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('ory_session_ory', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ory_session_ory', 'Bearer');
+// Configure Bearer authorization: oryWorkspaceApiKey
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Ory\Client\Api\ProjectApi(
@@ -500,7 +486,7 @@ try {
 
 ### Authorization
 
-[oryNetworkCookie](../../README.md#oryNetworkCookie)
+[oryWorkspaceApiKey](../../README.md#oryWorkspaceApiKey)
 
 ### HTTP request headers
 
@@ -529,10 +515,8 @@ This endpoint requires the user to be a member of the project with the role `OWN
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: oryNetworkCookie
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('ory_session_ory', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ory_session_ory', 'Bearer');
+// Configure Bearer authorization: oryWorkspaceApiKey
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Ory\Client\Api\ProjectApi(
@@ -569,7 +553,7 @@ try {
 
 ### Authorization
 
-[oryNetworkCookie](../../README.md#oryNetworkCookie)
+[oryWorkspaceApiKey](../../README.md#oryWorkspaceApiKey)
 
 ### HTTP request headers
 
@@ -598,10 +582,8 @@ List all B2B SSO Organizations for a project
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: oryNetworkCookie
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('ory_session_ory', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ory_session_ory', 'Bearer');
+// Configure Bearer authorization: oryWorkspaceApiKey
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Ory\Client\Api\ProjectApi(
@@ -644,7 +626,7 @@ try {
 
 ### Authorization
 
-[oryNetworkCookie](../../README.md#oryNetworkCookie)
+[oryWorkspaceApiKey](../../README.md#oryWorkspaceApiKey)
 
 ### HTTP request headers
 
@@ -673,10 +655,8 @@ A list of all the project's API tokens.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: oryNetworkCookie
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('ory_session_ory', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ory_session_ory', 'Bearer');
+// Configure Bearer authorization: oryWorkspaceApiKey
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Ory\Client\Api\ProjectApi(
@@ -713,7 +693,7 @@ try {
 
 ### Authorization
 
-[oryNetworkCookie](../../README.md#oryNetworkCookie)
+[oryWorkspaceApiKey](../../README.md#oryWorkspaceApiKey)
 
 ### HTTP request headers
 
@@ -742,10 +722,8 @@ Lists all projects you have access to.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: oryNetworkCookie
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('ory_session_ory', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ory_session_ory', 'Bearer');
+// Configure Bearer authorization: oryWorkspaceApiKey
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Ory\Client\Api\ProjectApi(
@@ -779,7 +757,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[oryNetworkCookie](../../README.md#oryNetworkCookie)
+[oryWorkspaceApiKey](../../README.md#oryWorkspaceApiKey)
 
 ### HTTP request headers
 
@@ -808,10 +786,8 @@ Deprecated: Use the `patchProjectWithRevision` endpoint instead to specify the e
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: oryNetworkCookie
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('ory_session_ory', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ory_session_ory', 'Bearer');
+// Configure Bearer authorization: oryWorkspaceApiKey
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Ory\Client\Api\ProjectApi(
@@ -850,7 +826,7 @@ try {
 
 ### Authorization
 
-[oryNetworkCookie](../../README.md#oryNetworkCookie)
+[oryWorkspaceApiKey](../../README.md#oryWorkspaceApiKey)
 
 ### HTTP request headers
 
@@ -879,10 +855,8 @@ Irrecoverably purge a project
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: oryNetworkCookie
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('ory_session_ory', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ory_session_ory', 'Bearer');
+// Configure Bearer authorization: oryWorkspaceApiKey
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Ory\Client\Api\ProjectApi(
@@ -918,7 +892,7 @@ void (empty response body)
 
 ### Authorization
 
-[oryNetworkCookie](../../README.md#oryNetworkCookie)
+[oryWorkspaceApiKey](../../README.md#oryWorkspaceApiKey)
 
 ### HTTP request headers
 
@@ -947,10 +921,8 @@ This also sets their invite status to `REMOVED`. This endpoint requires the user
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: oryNetworkCookie
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('ory_session_ory', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ory_session_ory', 'Bearer');
+// Configure Bearer authorization: oryWorkspaceApiKey
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Ory\Client\Api\ProjectApi(
@@ -988,7 +960,7 @@ void (empty response body)
 
 ### Authorization
 
-[oryNetworkCookie](../../README.md#oryNetworkCookie)
+[oryWorkspaceApiKey](../../README.md#oryWorkspaceApiKey)
 
 ### HTTP request headers
 
@@ -1017,10 +989,8 @@ This endpoints allows you to update the Ory Network project configuration for in
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: oryNetworkCookie
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('ory_session_ory', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ory_session_ory', 'Bearer');
+// Configure Bearer authorization: oryWorkspaceApiKey
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Ory\Client\Api\ProjectApi(
@@ -1059,7 +1029,7 @@ try {
 
 ### Authorization
 
-[oryNetworkCookie](../../README.md#oryNetworkCookie)
+[oryWorkspaceApiKey](../../README.md#oryWorkspaceApiKey)
 
 ### HTTP request headers
 
@@ -1088,10 +1058,8 @@ Update a B2B SSO Organization for a project
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: oryNetworkCookie
-$config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKey('ory_session_ory', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Ory\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ory_session_ory', 'Bearer');
+// Configure Bearer authorization: oryWorkspaceApiKey
+$config = Ory\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Ory\Client\Api\ProjectApi(
@@ -1132,7 +1100,7 @@ try {
 
 ### Authorization
 
-[oryNetworkCookie](../../README.md#oryNetworkCookie)
+[oryWorkspaceApiKey](../../README.md#oryWorkspaceApiKey)
 
 ### HTTP request headers
 
