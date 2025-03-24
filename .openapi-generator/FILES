@@ -257,6 +257,7 @@ docs/Model/UpdateLoginFlowWithLookupSecretMethod.md
 docs/Model/UpdateLoginFlowWithOidcMethod.md
 docs/Model/UpdateLoginFlowWithPasskeyMethod.md
 docs/Model/UpdateLoginFlowWithPasswordMethod.md
+docs/Model/UpdateLoginFlowWithSamlMethod.md
 docs/Model/UpdateLoginFlowWithTotpMethod.md
 docs/Model/UpdateLoginFlowWithWebAuthnMethod.md
 docs/Model/UpdateRecoveryFlowBody.md
@@ -268,6 +269,7 @@ docs/Model/UpdateRegistrationFlowWithOidcMethod.md
 docs/Model/UpdateRegistrationFlowWithPasskeyMethod.md
 docs/Model/UpdateRegistrationFlowWithPasswordMethod.md
 docs/Model/UpdateRegistrationFlowWithProfileMethod.md
+docs/Model/UpdateRegistrationFlowWithSamlMethod.md
 docs/Model/UpdateRegistrationFlowWithWebAuthnMethod.md
 docs/Model/UpdateSettingsFlowBody.md
 docs/Model/UpdateSettingsFlowWithLookupMethod.md
@@ -275,6 +277,7 @@ docs/Model/UpdateSettingsFlowWithOidcMethod.md
 docs/Model/UpdateSettingsFlowWithPasskeyMethod.md
 docs/Model/UpdateSettingsFlowWithPasswordMethod.md
 docs/Model/UpdateSettingsFlowWithProfileMethod.md
+docs/Model/UpdateSettingsFlowWithSamlMethod.md
 docs/Model/UpdateSettingsFlowWithTotpMethod.md
 docs/Model/UpdateSettingsFlowWithWebAuthnMethod.md
 docs/Model/UpdateSubscriptionBody.md
@@ -551,6 +554,7 @@ lib/Model/UpdateLoginFlowWithLookupSecretMethod.php
 lib/Model/UpdateLoginFlowWithOidcMethod.php
 lib/Model/UpdateLoginFlowWithPasskeyMethod.php
 lib/Model/UpdateLoginFlowWithPasswordMethod.php
+lib/Model/UpdateLoginFlowWithSamlMethod.php
 lib/Model/UpdateLoginFlowWithTotpMethod.php
 lib/Model/UpdateLoginFlowWithWebAuthnMethod.php
 lib/Model/UpdateRecoveryFlowBody.php
@@ -562,6 +566,7 @@ lib/Model/UpdateRegistrationFlowWithOidcMethod.php
 lib/Model/UpdateRegistrationFlowWithPasskeyMethod.php
 lib/Model/UpdateRegistrationFlowWithPasswordMethod.php
 lib/Model/UpdateRegistrationFlowWithProfileMethod.php
+lib/Model/UpdateRegistrationFlowWithSamlMethod.php
 lib/Model/UpdateRegistrationFlowWithWebAuthnMethod.php
 lib/Model/UpdateSettingsFlowBody.php
 lib/Model/UpdateSettingsFlowWithLookupMethod.php
@@ -569,6 +574,7 @@ lib/Model/UpdateSettingsFlowWithOidcMethod.php
 lib/Model/UpdateSettingsFlowWithPasskeyMethod.php
 lib/Model/UpdateSettingsFlowWithPasswordMethod.php
 lib/Model/UpdateSettingsFlowWithProfileMethod.php
+lib/Model/UpdateSettingsFlowWithSamlMethod.php
 lib/Model/UpdateSettingsFlowWithTotpMethod.php
 lib/Model/UpdateSettingsFlowWithWebAuthnMethod.php
 lib/Model/UpdateSubscriptionBody.php
@@ -842,6 +848,7 @@ test/Model/UpdateLoginFlowWithLookupSecretMethodTest.php
 test/Model/UpdateLoginFlowWithOidcMethodTest.php
 test/Model/UpdateLoginFlowWithPasskeyMethodTest.php
 test/Model/UpdateLoginFlowWithPasswordMethodTest.php
+test/Model/UpdateLoginFlowWithSamlMethodTest.php
 test/Model/UpdateLoginFlowWithTotpMethodTest.php
 test/Model/UpdateLoginFlowWithWebAuthnMethodTest.php
 test/Model/UpdateRecoveryFlowBodyTest.php
@@ -853,6 +860,7 @@ test/Model/UpdateRegistrationFlowWithOidcMethodTest.php
 test/Model/UpdateRegistrationFlowWithPasskeyMethodTest.php
 test/Model/UpdateRegistrationFlowWithPasswordMethodTest.php
 test/Model/UpdateRegistrationFlowWithProfileMethodTest.php
+test/Model/UpdateRegistrationFlowWithSamlMethodTest.php
 test/Model/UpdateRegistrationFlowWithWebAuthnMethodTest.php
 test/Model/UpdateSettingsFlowBodyTest.php
 test/Model/UpdateSettingsFlowWithLookupMethodTest.php
@@ -860,6 +868,7 @@ test/Model/UpdateSettingsFlowWithOidcMethodTest.php
 test/Model/UpdateSettingsFlowWithPasskeyMethodTest.php
 test/Model/UpdateSettingsFlowWithPasswordMethodTest.php
 test/Model/UpdateSettingsFlowWithProfileMethodTest.php
+test/Model/UpdateSettingsFlowWithSamlMethodTest.php
 test/Model/UpdateSettingsFlowWithTotpMethodTest.php
 test/Model/UpdateSettingsFlowWithWebAuthnMethodTest.php
 test/Model/UpdateSubscriptionBodyTest.php
