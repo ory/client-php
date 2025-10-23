@@ -1,4 +1,4 @@
-# # GetMetricsEventTypesResponse
+# # GetMetricsEventTypes
 
 ## Properties
 

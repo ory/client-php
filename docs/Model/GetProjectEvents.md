@@ -1,4 +1,4 @@
-# # GetProjectEventsResponse
+# # GetProjectEvents
 
 ## Properties
 
