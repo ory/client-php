@@ -656,7 +656,7 @@ getProject($projectId): \Ory\Client\Model\Project
 - https://api.console.ory.sh The Ory Network control plane API which is used to manage your Ory Network projects and workspaces.
 Get a Project
 
-Get a projects you have access to by its ID.
+Get a project you have access to by its ID.
 
 ### Example
 
